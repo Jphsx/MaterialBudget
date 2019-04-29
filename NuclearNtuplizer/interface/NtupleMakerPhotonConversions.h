@@ -44,6 +44,7 @@
 #include "TrackAssociatorBase.h"
 #include "DataFormats/Common/interface/RefToBaseVector.h"
 
+
 #include "DataFormats/EgammaCandidates/interface/Conversion.h"
 #include "DataFormats/EgammaCandidates/interface/ConversionFwd.h"
 
@@ -77,8 +78,9 @@ class NtupleMakerPhotonConversions : public edm::EDAnalyzer
     edm::EDGetTokenT<std::vector<PileupSummaryInfo>> addPileupInfoToken;
     edm::EDGetTokenT<reco::BeamSpot> offlineBeamSpotToken;
     edm::EDGetTokenT<reco::PFDisplacedVertexCollection> particleFlowDisplacedVertexToken;   
-    edm::EDGetTokenT<TrackingVertexCollection> trackingParticlesToken;
-
+    edm::EDGetTokenT<TrackingVertexCollection> trackingParticlesToken; 
+    edm::EDGetTokenT<reco::ConversionCollection> PCToken;
+	
     TTree* outputTree;
 
     /// General
@@ -111,6 +113,14 @@ class NtupleMakerPhotonConversions : public edm::EDAnalyzer
     double BS_dydz;
     double BS_xWidth;
     double BS_yWidth;
+
+    ///PC Variables
+    unsigned int numPC{};
+    std::vector<double> *PCDV_x;
+    std::vector<double> *PCDV_y;
+    std::vector<double> *PCDV_z;
+    std::vector<double> *PCDV_InvMass;
+    std::vector<double> *PCDV_CotTheta;
 
     /// Tracking Vertices
     unsigned int numberOfMC_TrkV;

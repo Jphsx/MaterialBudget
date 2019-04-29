@@ -24,6 +24,8 @@ NtupleMakerPhotonConversions::NtupleMakerPhotonConversions( const edm::Parameter
   edm::InputTag trackingParticlesTag ("mix","MergedTrackTruth");
   trackingParticlesToken           = consumes< TrackingVertexCollection > (trackingParticlesTag);
 
+  PCToken			   = consumes< reco::ConversionCollection >(edm::InputTag("allConversions"));
+
 }
 
 /* Begin Job */
@@ -35,6 +37,14 @@ void NtupleMakerPhotonConversions::beginJob()
   eventNumber = 0;
   runNumber = 0;
   lumiSection = 0;
+
+  // Init PC
+  numPC = 0;
+  PCDV_x = new std::vector<double>;
+  PCDV_y = new std::vector<double>;
+  PCDV_z = new std::vector<double>;
+  PCDV_InvMass = new std::vector<double>;
+  PCDV_CotTheta = new std::vector<double>;
 
   /// Initialize Primary Vertices
   numberOfPV = 0;
@@ -65,7 +75,7 @@ void NtupleMakerPhotonConversions::beginJob()
   numberOfMC_TrkV = 0;
   MC_TrkV_isNuclearInteraction = new std::vector< bool >;
   MC_TrkV_isKaonDecay = new std::vector< bool >;
-  MC_TrkV_isConversion = new std::vector< bool >;
+  MC_TrkV_isConversion = new std::vector< bool >;//make sure this is not rejected
   MC_TrkV_x = new std::vector< double >;
   MC_TrkV_y = new std::vector< double >;
   MC_TrkV_z = new std::vector< double >;
@@ -172,13 +182,21 @@ void NtupleMakerPhotonConversions::beginJob()
   edm::Service< TFileService > fs;
 
   /// Tree
-  outputTree = fs->make<TTree>("NuclearInteractionsTree","NuclearInteractionsTree");
+  outputTree = fs->make<TTree>("PhotonConversionsTree","PhotonConversionsTree");
 
   /// Branches for Event Number etc...
   outputTree->Branch( "isRealData", &isRealData, "isRealData/O" ); // O = boolean Bool_t
   outputTree->Branch( "eventNumber", &eventNumber, "eventNumber/i" ); // i = 32 bit unsigned int UInt_t
   outputTree->Branch( "runNumber", &runNumber, "runNumber/i" );
   outputTree->Branch( "lumiSection", &lumiSection, "lumiSection/i" );
+  
+  /// Branches for PC
+  outputTree->Branch("numPC", &numPC, "numPC/i");
+  outputTree->Branch("PCDV_x", "std::vector<double>", &PCDV_x);
+  outputTree->Branch("PCDV_y", "std::vector<double>", &PCDV_y);
+  outputTree->Branch("PCDV_z", "std::vector<double>", &PCDV_z);
+  outputTree->Branch("PCDV_InvMass", "std::vector<double>", &PCDV_InvMass);
+  outputTree->Branch("PCDV_CotTheta", "std::vector<double>", &PCDV_CotTheta);
 
   /// Branches for Primary Vertices
   outputTree->Branch( "numberOfPV", &numberOfPV, "numberOfPV/i" );
@@ -337,6 +355,27 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   PV_yError->clear();
   PV_zError->clear();
   PV_isFake->clear();
+
+
+  /// Get PC variables
+  edm::Handle< reco::ConversionCollection > conversionsHandle;
+  iEvent.getByToken( PCToken, conversionsHandle );
+  // populate N pcs
+  PCDV_x->clear();
+  PCDV_y->clear();
+  PCDV_z->clear();
+  PCDV_InvMass->clear();
+  PCDV_CotTheta->clear();
+
+  numPC = conversionsHandle->size();  
+  for( unsigned int i=0; i<conversionsHandle->size(); i++){
+	PCDV_x->push_back( conversionsHandle->at(i).conversionVertex().x());
+	PCDV_y->push_back( conversionsHandle->at(i).conversionVertex().y());
+        PCDV_z->push_back( conversionsHandle->at(i).conversionVertex().z());
+	PCDV_InvMass->push_back( conversionsHandle->at(i).pairInvariantMass());
+	PCDV_CotTheta->push_back( conversionsHandle->at(i).pairCotThetaSeparation());
+
+  }
 
   /// Get Primary Vertices
   edm::Handle< reco::VertexCollection > primaryVerticesHandle;
