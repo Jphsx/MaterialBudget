@@ -137,14 +137,14 @@ void NtupleMakerPhotonConversions::beginJob()
   PC_momentumOut_theta = new std::vector< double >;
   PC_momentumOut_mass = new std::vector< double >;
   PC_momentumOut_numberOfTracks = new std::vector< unsigned int >;
-  PC_numberOfTracks_0p0 = new std::vector< unsigned int >;
+/*  PC_numberOfTracks_0p0 = new std::vector< unsigned int >;
   PC_numberOfTracks_0p2 = new std::vector< unsigned int >;
   PC_numberOfTracks_0p5 = new std::vector< unsigned int >;
   PC_numberOfTracks_1p0 = new std::vector< unsigned int >;
   PC_numberOfTracks_Out0p0 = new std::vector< unsigned int >;
   PC_numberOfTracks_Out0p2 = new std::vector< unsigned int >;
   PC_numberOfTracks_Out0p5 = new std::vector< unsigned int >;
-  PC_numberOfTracks_Out1p0 = new std::vector< unsigned int >;
+  PC_numberOfTracks_Out1p0 = new std::vector< unsigned int >; */
   PC_isNuclear = new std::vector< bool >;
   PC_isNuclearLoose = new std::vector< bool >;
   PC_isNuclearKink = new std::vector< bool >;
@@ -357,17 +357,17 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   edm::Handle< reco::ConversionCollection > conversionsHandle;
   iEvent.getByToken( PCToken, conversionsHandle );
   // populate N pcs
-  PCDV_x->clear();
-  PCDV_y->clear();
-  PCDV_z->clear();
-  PCDV_InvMass->clear();
-  PCDV_CotTheta->clear();
+ // PCDV_x->clear();
+ // PCDV_y->clear();
+ // PCDV_z->clear();
+ // PCDV_InvMass->clear();
+ // PCDV_CotTheta->clear();
 
   numberOfPC = conversionsHandle->size();  
   for( unsigned int i=0; i<conversionsHandle->size(); i++){
 	PC_x->push_back( conversionsHandle->at(i).conversionVertex().x());
 	PC_y->push_back( conversionsHandle->at(i).conversionVertex().y());
-        PC_z->push_back( conversionsHandle->at(i).conversionVertex().z());
+    PC_z->push_back( conversionsHandle->at(i).conversionVertex().z());
 	//PCDV_InvMass->push_back( conversionsHandle->at(i).pairInvariantMass());
 	//PCDV_CotTheta->push_back( conversionsHandle->at(i).pairCotThetaSeparation());
 
@@ -766,14 +766,14 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   PC_momentumOut_theta->clear();
   PC_momentumOut_mass->clear();
   PC_momentumOut_numberOfTracks->clear();
-  PC_numberOfTracks_0p0->clear();
+ /* PC_numberOfTracks_0p0->clear();
   PC_numberOfTracks_0p2->clear();
   PC_numberOfTracks_0p5->clear();
   PC_numberOfTracks_1p0->clear();
   PC_numberOfTracks_Out0p0->clear();
   PC_numberOfTracks_Out0p2->clear();
   PC_numberOfTracks_Out0p5->clear();
-  PC_numberOfTracks_Out1p0->clear();
+  PC_numberOfTracks_Out1p0->clear(); */
   PC_isNuclear->clear();
   PC_isNuclearLoose->clear();
   PC_isNuclearKink->clear();
