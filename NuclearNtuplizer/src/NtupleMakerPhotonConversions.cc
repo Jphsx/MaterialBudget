@@ -893,7 +893,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
         //  continue;
         // Extra Check the Vertex is Nuclear Interection
         //if ( ! (isNuclearInteraction( thisVtx )) )
-		if( !(isConversion( thisVtx ) )
+		if( !(isConversion( thisVtx ) ) )
           continue;
         jAssociationCounter++;
 
