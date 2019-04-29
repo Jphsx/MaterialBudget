@@ -363,11 +363,11 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
  // PCDV_InvMass->clear();
  // PCDV_CotTheta->clear();
 
-  numberOfPC = conversionsHandle->size();  
-  for( unsigned int i=0; i<conversionsHandle->size(); i++){
-	PC_x->push_back( conversionsHandle->at(i).conversionVertex().x());
-	PC_y->push_back( conversionsHandle->at(i).conversionVertex().y());
-    PC_z->push_back( conversionsHandle->at(i).conversionVertex().z());
+ // numberOfPC = conversionsHandle->size();  
+ // for( unsigned int i=0; i<conversionsHandle->size(); i++){
+//	PC_x->push_back( conversionsHandle->at(i).conversionVertex().x());
+//	PC_y->push_back( conversionsHandle->at(i).conversionVertex().y());
+ //   PC_z->push_back( conversionsHandle->at(i).conversionVertex().z());
 	//PCDV_InvMass->push_back( conversionsHandle->at(i).pairInvariantMass());
 	//PCDV_CotTheta->push_back( conversionsHandle->at(i).pairCotThetaSeparation());
 
@@ -501,8 +501,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       TrackingVertex thisVtx = trackingVtxHandle->at(i);
 
       /// Check the Vertex is Nucl Int
-      if ( thisVtx.nSourceTracks() < 1 )
-        continue;
+    //  if ( thisVtx.nSourceTracks() < 1 )
+    //   continue;
 
       bool isThisNuclearInteraction = isNuclearInteraction( thisVtx );
       bool isThisKaonDecay = isKaonDecay( thisVtx );
@@ -510,7 +510,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 
       // select only Nuclear Interection vertex candicate
       //if ( !isThisNuclearInteraction && !isThisKaonDecay && !isThisConversion )
-      if ( !isThisNuclearInteraction )
+    //  if ( !isThisNuclearInteraction )
+	if(!isThisConversion)
         continue;
 
       numberOfMC_TrkV++;
@@ -888,10 +889,11 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
         TrackingVertex thisVtx = trackingVtxHandle->at(j);
 
         /// Check the Vertex is Nucl Int
-        if ( thisVtx.nSourceTracks() < 1 )
-          continue;
+       // if ( thisVtx.nSourceTracks() < 1 ) //remove for photon
+        //  continue;
         // Extra Check the Vertex is Nuclear Interection
-        if ( ! (isNuclearInteraction( thisVtx )) )
+        //if ( ! (isNuclearInteraction( thisVtx )) )
+		if( !(isConversion( thisVtx ) )
           continue;
         jAssociationCounter++;
 
