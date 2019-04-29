@@ -39,12 +39,13 @@ void NtupleMakerPhotonConversions::beginJob()
   lumiSection = 0;
 
   // Init PC
-  numPC = 0;
+ /* numPC = 0;
   PCDV_x = new std::vector<double>;
   PCDV_y = new std::vector<double>;
   PCDV_z = new std::vector<double>;
   PCDV_InvMass = new std::vector<double>;
   PCDV_CotTheta = new std::vector<double>;
+*/
 
   /// Initialize Primary Vertices
   numberOfPV = 0;
@@ -95,11 +96,11 @@ void NtupleMakerPhotonConversions::beginJob()
   MC_TrkV_numberOfChargedParticles_Out0p5 = new std::vector< unsigned int >;
   MC_TrkV_numberOfChargedParticles_Out1p0 = new std::vector< unsigned int >;
   MC_TrkV_isAssociatedPF = new std::vector< bool >;
-  MC_TrkV_associationPFDVIdx = new std::vector< unsigned int >;
-  MC_TrkV_associationPFDV_deltaR2d= new std::vector< double >;
-  MC_TrkV_associationPFDV_deltaR3d= new std::vector< double >;
-  MC_TrkV_associationPFDV_deltaR3dPerpendicular= new std::vector< double >;
-  MC_TrkV_associationPFDV_deltaR3dParallel= new std::vector< double >;
+  MC_TrkV_associationPCIdx = new std::vector< unsigned int >;
+  MC_TrkV_associationPC_deltaR2d= new std::vector< double >;
+  MC_TrkV_associationPC_deltaR3d= new std::vector< double >;
+  MC_TrkV_associationPC_deltaR3dPerpendicular= new std::vector< double >;
+  MC_TrkV_associationPC_deltaR3dParallel= new std::vector< double >;
 /*
   MC_TrkV_associationDeltaPt = new std::vector< double >;
   MC_TrkV_associationDeltaPhi = new std::vector< double >;
@@ -123,60 +124,60 @@ void NtupleMakerPhotonConversions::beginJob()
 */
 
   /// Initialize Displaced Vertices
-  numberOfPFDV = 0;
-  PFDV_x = new std::vector< double >;
-  PFDV_y = new std::vector< double >;
-  PFDV_z = new std::vector< double >;
-  PFDV_momentumInc_pt = new std::vector< double >;
-  PFDV_Inc_charge = new std::vector< double >;
-  PFDV_momentumInc_phi = new std::vector< double >;
-  PFDV_momentumInc_theta = new std::vector< double >;
-  PFDV_momentumOut_pt = new std::vector< double >;
-  PFDV_momentumOut_phi = new std::vector< double >;
-  PFDV_momentumOut_theta = new std::vector< double >;
-  PFDV_momentumOut_mass = new std::vector< double >;
-  PFDV_momentumOut_numberOfTracks = new std::vector< unsigned int >;
-  PFDV_numberOfTracks_0p0 = new std::vector< unsigned int >;
-  PFDV_numberOfTracks_0p2 = new std::vector< unsigned int >;
-  PFDV_numberOfTracks_0p5 = new std::vector< unsigned int >;
-  PFDV_numberOfTracks_1p0 = new std::vector< unsigned int >;
-  PFDV_numberOfTracks_Out0p0 = new std::vector< unsigned int >;
-  PFDV_numberOfTracks_Out0p2 = new std::vector< unsigned int >;
-  PFDV_numberOfTracks_Out0p5 = new std::vector< unsigned int >;
-  PFDV_numberOfTracks_Out1p0 = new std::vector< unsigned int >;
-  PFDV_isNuclear = new std::vector< bool >;
-  PFDV_isNuclearLoose = new std::vector< bool >;
-  PFDV_isNuclearKink = new std::vector< bool >;
-  PFDV_isK0 = new std::vector< bool >;
-  PFDV_isLambda = new std::vector< bool >;
-  PFDV_isLambdaBar = new std::vector< bool >;
-  PFDV_isKPlusLoose = new std::vector< bool >;
-  PFDV_isKMinusLoose = new std::vector< bool >;
-  PFDV_isConversionLoose = new std::vector< bool >;
-  PFDV_isLooper = new std::vector< bool >;
-  PFDV_isFake = new std::vector< bool >;
-  PFDV_isTherePrimaryTrack = new std::vector< bool >;
-  PFDV_isThereMergedTrack = new std::vector< bool >;
-  PFDV_isAssociatedMC = new std::vector< bool >;
-  PFDV_deltaR3d_Associated = new std::vector< double >;
-  PFDV_deltaR2d_Associated = new std::vector< double >;
-  PFDV_associationMC_TrkVIdx = new std::vector< unsigned int >;
-  PFDV_vTrack_algo = new std::vector< std::vector< int > >;
-  PFDV_vTrack_pt = new std::vector< std::vector< double > >;
-  PFDV_vTrack_eta = new std::vector< std::vector< double > >;
-  PFDV_vTrack_phi = new std::vector< std::vector< double > >;
-  PFDV_vTrack_chi2 = new std::vector< std::vector< double > >;
-  PFDV_vTrack_normalizedChi2 = new std::vector< std::vector< double > >;
-  //PFDV_vTrack_isHighPurity = new std::vector< std::vector< bool > >;
-  PFDV_vTrack_rho = new std::vector< std::vector< double > >;
-  PFDV_vTrack_numberOfValidHits = new std::vector< std::vector< unsigned int > >;
-  PFDV_vTrack_numberOfExpectedOuterHits = new std::vector< std::vector< unsigned int > >;
-  PFDV_vTrack_closestDxyPVIdx = new std::vector< std::vector< unsigned int > >;
-  PFDV_vTrack_closestDxyPVIdx_dxy = new std::vector< std::vector< double > >;
-  PFDV_vTrack_closestDxyPVIdx_dz = new std::vector< std::vector< double > >;
-  PFDV_vTrack_closestDzPVIdx = new std::vector< std::vector< unsigned int > >;
-  PFDV_vTrack_closestDzPVIdx_dxy = new std::vector< std::vector< double > >;
-  PFDV_vTrack_closestDzPVIdx_dz = new std::vector< std::vector< double > >;
+  numberOfPC = 0;
+  PC_x = new std::vector< double >;
+  PC_y = new std::vector< double >;
+  PC_z = new std::vector< double >;
+  PC_momentumInc_pt = new std::vector< double >;
+  PC_Inc_charge = new std::vector< double >;
+  PC_momentumInc_phi = new std::vector< double >;
+  PC_momentumInc_theta = new std::vector< double >;
+  PC_momentumOut_pt = new std::vector< double >;
+  PC_momentumOut_phi = new std::vector< double >;
+  PC_momentumOut_theta = new std::vector< double >;
+  PC_momentumOut_mass = new std::vector< double >;
+  PC_momentumOut_numberOfTracks = new std::vector< unsigned int >;
+  PC_numberOfTracks_0p0 = new std::vector< unsigned int >;
+  PC_numberOfTracks_0p2 = new std::vector< unsigned int >;
+  PC_numberOfTracks_0p5 = new std::vector< unsigned int >;
+  PC_numberOfTracks_1p0 = new std::vector< unsigned int >;
+  PC_numberOfTracks_Out0p0 = new std::vector< unsigned int >;
+  PC_numberOfTracks_Out0p2 = new std::vector< unsigned int >;
+  PC_numberOfTracks_Out0p5 = new std::vector< unsigned int >;
+  PC_numberOfTracks_Out1p0 = new std::vector< unsigned int >;
+  PC_isNuclear = new std::vector< bool >;
+  PC_isNuclearLoose = new std::vector< bool >;
+  PC_isNuclearKink = new std::vector< bool >;
+  PC_isK0 = new std::vector< bool >;
+  PC_isLambda = new std::vector< bool >;
+  PC_isLambdaBar = new std::vector< bool >;
+  PC_isKPlusLoose = new std::vector< bool >;
+  PC_isKMinusLoose = new std::vector< bool >;
+  PC_isConversionLoose = new std::vector< bool >;
+  PC_isLooper = new std::vector< bool >;
+  PC_isFake = new std::vector< bool >;
+  PC_isTherePrimaryTrack = new std::vector< bool >;
+  PC_isThereMergedTrack = new std::vector< bool >;
+  PC_isAssociatedMC = new std::vector< bool >;
+  PC_deltaR3d_Associated = new std::vector< double >;
+  PC_deltaR2d_Associated = new std::vector< double >;
+  PC_associationMC_TrkVIdx = new std::vector< unsigned int >;
+  PC_vTrack_algo = new std::vector< std::vector< int > >;
+  PC_vTrack_pt = new std::vector< std::vector< double > >;
+  PC_vTrack_eta = new std::vector< std::vector< double > >;
+  PC_vTrack_phi = new std::vector< std::vector< double > >;
+  PC_vTrack_chi2 = new std::vector< std::vector< double > >;
+  PC_vTrack_normalizedChi2 = new std::vector< std::vector< double > >;
+  //PC_vTrack_isHighPurity = new std::vector< std::vector< bool > >;
+  PC_vTrack_rho = new std::vector< std::vector< double > >;
+  PC_vTrack_numberOfValidHits = new std::vector< std::vector< unsigned int > >;
+  PC_vTrack_numberOfExpectedOuterHits = new std::vector< std::vector< unsigned int > >;
+  PC_vTrack_closestDxyPVIdx = new std::vector< std::vector< unsigned int > >;
+  PC_vTrack_closestDxyPVIdx_dxy = new std::vector< std::vector< double > >;
+  PC_vTrack_closestDxyPVIdx_dz = new std::vector< std::vector< double > >;
+  PC_vTrack_closestDzPVIdx = new std::vector< std::vector< unsigned int > >;
+  PC_vTrack_closestDzPVIdx_dxy = new std::vector< std::vector< double > >;
+  PC_vTrack_closestDzPVIdx_dz = new std::vector< std::vector< double > >;
 
   // TFileService
   edm::Service< TFileService > fs;
@@ -191,12 +192,14 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "lumiSection", &lumiSection, "lumiSection/i" );
   
   /// Branches for PC
+/*
   outputTree->Branch("numPC", &numPC, "numPC/i");
   outputTree->Branch("PCDV_x", "std::vector<double>", &PCDV_x);
   outputTree->Branch("PCDV_y", "std::vector<double>", &PCDV_y);
   outputTree->Branch("PCDV_z", "std::vector<double>", &PCDV_z);
   outputTree->Branch("PCDV_InvMass", "std::vector<double>", &PCDV_InvMass);
   outputTree->Branch("PCDV_CotTheta", "std::vector<double>", &PCDV_CotTheta);
+*/
 
   /// Branches for Primary Vertices
   outputTree->Branch( "numberOfPV", &numberOfPV, "numberOfPV/i" );
@@ -247,11 +250,11 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "MC_TrkV_numberOfChargedParticles_Out0p5", "std::vector< unsigned int >", &MC_TrkV_numberOfChargedParticles_Out0p5 );
   outputTree->Branch( "MC_TrkV_numberOfChargedParticles_Out1p0", "std::vector< unsigned int >", &MC_TrkV_numberOfChargedParticles_Out1p0 );
   outputTree->Branch( "MC_TrkV_isAssociatedPF", "std::vector< bool >", &MC_TrkV_isAssociatedPF );
-  outputTree->Branch( "MC_TrkV_associationPFDVIdx", "std::vector< unsigned int >", &MC_TrkV_associationPFDVIdx );
-  outputTree->Branch( "MC_TrkV_associationPFDV_deltaR2d", "std::vector< double >", &MC_TrkV_associationPFDV_deltaR2d );
-  outputTree->Branch( "MC_TrkV_associationPFDV_deltaR3d", "std::vector< double >", &MC_TrkV_associationPFDV_deltaR3d );
-  outputTree->Branch( "MC_TrkV_associationPFDV_deltaR3dPerpendicular", "std::vector< double >", &MC_TrkV_associationPFDV_deltaR3dPerpendicular );
-  outputTree->Branch( "MC_TrkV_associationPFDV_deltaR3dParallel", "std::vector< double >", &MC_TrkV_associationPFDV_deltaR3dParallel );
+  outputTree->Branch( "MC_TrkV_associationPCIdx", "std::vector< unsigned int >", &MC_TrkV_associationPCIdx );
+  outputTree->Branch( "MC_TrkV_associationPC_deltaR2d", "std::vector< double >", &MC_TrkV_associationPC_deltaR2d );
+  outputTree->Branch( "MC_TrkV_associationPC_deltaR3d", "std::vector< double >", &MC_TrkV_associationPC_deltaR3d );
+  outputTree->Branch( "MC_TrkV_associationPC_deltaR3dPerpendicular", "std::vector< double >", &MC_TrkV_associationPC_deltaR3dPerpendicular );
+  outputTree->Branch( "MC_TrkV_associationPC_deltaR3dParallel", "std::vector< double >", &MC_TrkV_associationPC_deltaR3dParallel );
 /*
   outputTree->Branch( "MC_TrkV_associationDeltaPt", "std::vector< double >", &MC_TrkV_associationDeltaPt );
   outputTree->Branch( "MC_TrkV_associationDeltaPhi", "std::vector< double >", &MC_TrkV_associationDeltaPhi );
@@ -275,60 +278,53 @@ void NtupleMakerPhotonConversions::beginJob()
 */
 
   /// Branches for Displaced Vertices
-  outputTree->Branch( "numberOfPFDV", &numberOfPFDV, "numberOfPFDV/i" );
-  outputTree->Branch( "PFDV_x", "std::vector< double >", &PFDV_x );
-  outputTree->Branch( "PFDV_y", "std::vector< double >", &PFDV_y );
-  outputTree->Branch( "PFDV_z", "std::vector< double >", &PFDV_z );
-  outputTree->Branch( "PFDV_momentumInc_pt", "std::vector< double >", &PFDV_momentumInc_pt );
-  outputTree->Branch( "PFDV_Inc_charge", "std::vector< double >", &PFDV_Inc_charge );
-  outputTree->Branch( "PFDV_momentumInc_phi", "std::vector< double >", &PFDV_momentumInc_phi );
-  outputTree->Branch( "PFDV_momentumInc_theta", "std::vector< double >", &PFDV_momentumInc_theta );
-  outputTree->Branch( "PFDV_momentumOut_pt", "std::vector< double >", &PFDV_momentumOut_pt );
-  outputTree->Branch( "PFDV_momentumOut_phi", "std::vector< double >", &PFDV_momentumOut_phi );
-  outputTree->Branch( "PFDV_momentumOut_theta", "std::vector< double >", &PFDV_momentumOut_theta );
-  outputTree->Branch( "PFDV_momentumOut_mass", "std::vector< double >", &PFDV_momentumOut_mass );
-  outputTree->Branch( "PFDV_momentumOut_numberOfTracks", "std::vector< unsigned int >", &PFDV_momentumOut_numberOfTracks );
-  outputTree->Branch( "PFDV_numberOfTracks_0p0", "std::vector< unsigned int >", &PFDV_numberOfTracks_0p0 );
-  outputTree->Branch( "PFDV_numberOfTracks_0p2", "std::vector< unsigned int >", &PFDV_numberOfTracks_0p2 );
-  outputTree->Branch( "PFDV_numberOfTracks_0p5", "std::vector< unsigned int >", &PFDV_numberOfTracks_0p5 );
-  outputTree->Branch( "PFDV_numberOfTracks_1p0", "std::vector< unsigned int >", &PFDV_numberOfTracks_1p0 );
-  outputTree->Branch( "PFDV_numberOfTracks_Out0p0", "std::vector< unsigned int >", &PFDV_numberOfTracks_Out0p0 );
-  outputTree->Branch( "PFDV_numberOfTracks_Out0p2", "std::vector< unsigned int >", &PFDV_numberOfTracks_Out0p2 );
-  outputTree->Branch( "PFDV_numberOfTracks_Out0p5", "std::vector< unsigned int >", &PFDV_numberOfTracks_Out0p5 );
-  outputTree->Branch( "PFDV_numberOfTracks_Out1p0", "std::vector< unsigned int >", &PFDV_numberOfTracks_Out1p0 );
-  outputTree->Branch( "PFDV_isNuclear", "std::vector< bool >", &PFDV_isNuclear );
-  outputTree->Branch( "PFDV_isNuclearLoose", "std::vector< bool >", &PFDV_isNuclearLoose );
-  outputTree->Branch( "PFDV_isNuclearKink", "std::vector< bool >", &PFDV_isNuclearKink );
-  outputTree->Branch( "PFDV_isK0", "std::vector< bool >", &PFDV_isK0 );
-  outputTree->Branch( "PFDV_isLambda", "std::vector< bool >", &PFDV_isLambda );
-  outputTree->Branch( "PFDV_isLambdaBar", "std::vector< bool >", &PFDV_isLambdaBar );
-  outputTree->Branch( "PFDV_isKPlusLoose", "std::vector< bool >", &PFDV_isKPlusLoose );
-  outputTree->Branch( "PFDV_isKMinusLoose", "std::vector< bool >", &PFDV_isKMinusLoose );
-  outputTree->Branch( "PFDV_isConversionLoose", "std::vector< bool >", &PFDV_isConversionLoose );
-  outputTree->Branch( "PFDV_isLooper", "std::vector< bool >", &PFDV_isLooper );
-  outputTree->Branch( "PFDV_isFake", "std::vector< bool >", &PFDV_isFake );
-  outputTree->Branch( "PFDV_isTherePrimaryTrack", "std::vector< bool >", &PFDV_isTherePrimaryTrack );
-  outputTree->Branch( "PFDV_isThereMergedTrack", "std::vector< bool >", &PFDV_isThereMergedTrack );
-  outputTree->Branch( "PFDV_isAssociatedMC", "std::vector< bool >", &PFDV_isAssociatedMC );
-  outputTree->Branch( "PFDV_deltaR3d_Associated", "std::vector< double >", &PFDV_deltaR3d_Associated );
-  outputTree->Branch( "PFDV_deltaR2d_Associated", "std::vector< double >", &PFDV_deltaR2d_Associated );
-  outputTree->Branch( "PFDV_associationMC_TrkVIdx", "std::vector< unsigned int >", &PFDV_associationMC_TrkVIdx );
-  outputTree->Branch( "PFDV_vTrack_algo", "std::vector< std::vector< int > >", &PFDV_vTrack_algo );
-  outputTree->Branch( "PFDV_vTrack_pt", "std::vector< std::vector< double > >", &PFDV_vTrack_pt );
-  outputTree->Branch( "PFDV_vTrack_eta", "std::vector< std::vector< double > >", &PFDV_vTrack_eta );
-  outputTree->Branch( "PFDV_vTrack_phi", "std::vector< std::vector< double > >", &PFDV_vTrack_phi );
-  outputTree->Branch( "PFDV_vTrack_chi2", "std::vector< std::vector< double > >", &PFDV_vTrack_chi2 );
-  outputTree->Branch( "PFDV_vTrack_normalizedChi2", "std::vector< std::vector< double > >", &PFDV_vTrack_normalizedChi2 );
-  outputTree->Branch( "PFDV_vTrack_rho", "std::vector< std::vector< double > >", &PFDV_vTrack_rho );
-  outputTree->Branch( "PFDV_vTrack_numberOfValidHits", "std::vector< std::vector< unsigned int > >", &PFDV_vTrack_numberOfValidHits );
-  outputTree->Branch( "PFDV_vTrack_numberOfExpectedOuterHits", "std::vector< std::vector< unsigned int > >", &PFDV_vTrack_numberOfExpectedOuterHits );
-  outputTree->Branch( "PFDV_vTrack_closestDxyPVIdx", "std::vector< std::vector< unsigned int > >", &PFDV_vTrack_closestDxyPVIdx );
-  outputTree->Branch( "PFDV_vTrack_closestDxyPVIdx_dxy", "std::vector< std::vector< double > >", &PFDV_vTrack_closestDxyPVIdx_dxy );
-  outputTree->Branch( "PFDV_vTrack_closestDxyPVIdx_dz", "std::vector< std::vector< double > >", &PFDV_vTrack_closestDxyPVIdx_dz );
-  outputTree->Branch( "PFDV_vTrack_closestDzPVIdx", "std::vector< std::vector< unsigned int > >", &PFDV_vTrack_closestDzPVIdx );
-  outputTree->Branch( "PFDV_vTrack_closestDzPVIdx_dxy", "std::vector< std::vector< double > >", &PFDV_vTrack_closestDzPVIdx_dxy );
-  outputTree->Branch( "PFDV_vTrack_closestDzPVIdx_dz", "std::vector< std::vector< double > >", &PFDV_vTrack_closestDzPVIdx_dz );
-  //outputTree->Branch( "PFDV_vTrack_isHighPurity", "std::vector< std::vector< bool > >", &PFDV_vTrack_isHighPurity );
+  outputTree->Branch( "numberOfPC", &numberOfPC, "numberOfPC/i" );
+  outputTree->Branch( "PC_x", "std::vector< double >", &PC_x );
+  outputTree->Branch( "PC_y", "std::vector< double >", &PC_y );
+  outputTree->Branch( "PC_z", "std::vector< double >", &PC_z );
+  outputTree->Branch( "PC_momentumInc_pt", "std::vector< double >", &PC_momentumInc_pt );
+  outputTree->Branch( "PC_Inc_charge", "std::vector< double >", &PC_Inc_charge );
+  outputTree->Branch( "PC_momentumInc_phi", "std::vector< double >", &PC_momentumInc_phi );
+  outputTree->Branch( "PC_momentumInc_theta", "std::vector< double >", &PC_momentumInc_theta );
+  outputTree->Branch( "PC_momentumOut_pt", "std::vector< double >", &PC_momentumOut_pt );
+  outputTree->Branch( "PC_momentumOut_phi", "std::vector< double >", &PC_momentumOut_phi );
+  outputTree->Branch( "PC_momentumOut_theta", "std::vector< double >", &PC_momentumOut_theta );
+  outputTree->Branch( "PC_momentumOut_mass", "std::vector< double >", &PC_momentumOut_mass );
+  outputTree->Branch( "PC_momentumOut_numberOfTracks", "std::vector< unsigned int >", &PC_momentumOut_numberOfTracks );
+  
+  outputTree->Branch( "PC_isNuclear", "std::vector< bool >", &PC_isNuclear );
+  outputTree->Branch( "PC_isNuclearLoose", "std::vector< bool >", &PC_isNuclearLoose );
+  outputTree->Branch( "PC_isNuclearKink", "std::vector< bool >", &PC_isNuclearKink );
+  outputTree->Branch( "PC_isK0", "std::vector< bool >", &PC_isK0 );
+  outputTree->Branch( "PC_isLambda", "std::vector< bool >", &PC_isLambda );
+  outputTree->Branch( "PC_isLambdaBar", "std::vector< bool >", &PC_isLambdaBar );
+  outputTree->Branch( "PC_isKPlusLoose", "std::vector< bool >", &PC_isKPlusLoose );
+  outputTree->Branch( "PC_isKMinusLoose", "std::vector< bool >", &PC_isKMinusLoose );
+  outputTree->Branch( "PC_isConversionLoose", "std::vector< bool >", &PC_isConversionLoose );
+  outputTree->Branch( "PC_isLooper", "std::vector< bool >", &PC_isLooper );
+  outputTree->Branch( "PC_isFake", "std::vector< bool >", &PC_isFake );
+  outputTree->Branch( "PC_isTherePrimaryTrack", "std::vector< bool >", &PC_isTherePrimaryTrack );
+  outputTree->Branch( "PC_isThereMergedTrack", "std::vector< bool >", &PC_isThereMergedTrack );
+  outputTree->Branch( "PC_isAssociatedMC", "std::vector< bool >", &PC_isAssociatedMC );
+  outputTree->Branch( "PC_deltaR3d_Associated", "std::vector< double >", &PC_deltaR3d_Associated );
+  outputTree->Branch( "PC_deltaR2d_Associated", "std::vector< double >", &PC_deltaR2d_Associated );
+  outputTree->Branch( "PC_associationMC_TrkVIdx", "std::vector< unsigned int >", &PC_associationMC_TrkVIdx );
+  outputTree->Branch( "PC_vTrack_algo", "std::vector< std::vector< int > >", &PC_vTrack_algo );
+  outputTree->Branch( "PC_vTrack_pt", "std::vector< std::vector< double > >", &PC_vTrack_pt );
+  outputTree->Branch( "PC_vTrack_eta", "std::vector< std::vector< double > >", &PC_vTrack_eta );
+  outputTree->Branch( "PC_vTrack_phi", "std::vector< std::vector< double > >", &PC_vTrack_phi );
+  outputTree->Branch( "PC_vTrack_chi2", "std::vector< std::vector< double > >", &PC_vTrack_chi2 );
+  outputTree->Branch( "PC_vTrack_normalizedChi2", "std::vector< std::vector< double > >", &PC_vTrack_normalizedChi2 );
+  outputTree->Branch( "PC_vTrack_rho", "std::vector< std::vector< double > >", &PC_vTrack_rho );
+  outputTree->Branch( "PC_vTrack_numberOfValidHits", "std::vector< std::vector< unsigned int > >", &PC_vTrack_numberOfValidHits );
+  outputTree->Branch( "PC_vTrack_numberOfExpectedOuterHits", "std::vector< std::vector< unsigned int > >", &PC_vTrack_numberOfExpectedOuterHits );
+  outputTree->Branch( "PC_vTrack_closestDxyPVIdx", "std::vector< std::vector< unsigned int > >", &PC_vTrack_closestDxyPVIdx );
+  outputTree->Branch( "PC_vTrack_closestDxyPVIdx_dxy", "std::vector< std::vector< double > >", &PC_vTrack_closestDxyPVIdx_dxy );
+  outputTree->Branch( "PC_vTrack_closestDxyPVIdx_dz", "std::vector< std::vector< double > >", &PC_vTrack_closestDxyPVIdx_dz );
+  outputTree->Branch( "PC_vTrack_closestDzPVIdx", "std::vector< std::vector< unsigned int > >", &PC_vTrack_closestDzPVIdx );
+  outputTree->Branch( "PC_vTrack_closestDzPVIdx_dxy", "std::vector< std::vector< double > >", &PC_vTrack_closestDzPVIdx_dxy );
+  outputTree->Branch( "PC_vTrack_closestDzPVIdx_dz", "std::vector< std::vector< double > >", &PC_vTrack_closestDzPVIdx_dz );
+  //outputTree->Branch( "PC_vTrack_isHighPurity", "std::vector< std::vector< bool > >", &PC_vTrack_isHighPurity );
 }
 
 /* End Job */
@@ -367,13 +363,13 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   PCDV_InvMass->clear();
   PCDV_CotTheta->clear();
 
-  numPC = conversionsHandle->size();  
+  numberOfPC = conversionsHandle->size();  
   for( unsigned int i=0; i<conversionsHandle->size(); i++){
-	PCDV_x->push_back( conversionsHandle->at(i).conversionVertex().x());
-	PCDV_y->push_back( conversionsHandle->at(i).conversionVertex().y());
-        PCDV_z->push_back( conversionsHandle->at(i).conversionVertex().z());
-	PCDV_InvMass->push_back( conversionsHandle->at(i).pairInvariantMass());
-	PCDV_CotTheta->push_back( conversionsHandle->at(i).pairCotThetaSeparation());
+	PC_x->push_back( conversionsHandle->at(i).conversionVertex().x());
+	PC_y->push_back( conversionsHandle->at(i).conversionVertex().y());
+        PC_z->push_back( conversionsHandle->at(i).conversionVertex().z());
+	//PCDV_InvMass->push_back( conversionsHandle->at(i).pairInvariantMass());
+	//PCDV_CotTheta->push_back( conversionsHandle->at(i).pairCotThetaSeparation());
 
   }
 
@@ -462,11 +458,11 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   MC_TrkV_numberOfChargedParticles_Out0p5->clear();
   MC_TrkV_numberOfChargedParticles_Out1p0->clear();
   MC_TrkV_isAssociatedPF->clear();
-  MC_TrkV_associationPFDVIdx->clear();
-  MC_TrkV_associationPFDV_deltaR2d->clear();
-  MC_TrkV_associationPFDV_deltaR3d->clear();
-  MC_TrkV_associationPFDV_deltaR3dPerpendicular->clear();
-  MC_TrkV_associationPFDV_deltaR3dParallel->clear();
+  MC_TrkV_associationPCIdx->clear();
+  MC_TrkV_associationPC_deltaR2d->clear();
+  MC_TrkV_associationPC_deltaR3d->clear();
+  MC_TrkV_associationPC_deltaR3dPerpendicular->clear();
+  MC_TrkV_associationPC_deltaR3dParallel->clear();
 /*
   MC_TrkV_associationDeltaPt->clear();
   MC_TrkV_associationDeltaPhi->clear();
@@ -636,7 +632,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
           continue;
 
         // make assosication only with Nuclear Interection reco vertices
-        if ( !(thisDisplacedVtx.isNucl()) )
+        //if ( !(thisDisplacedVtx.isNucl()) )
+		if(!(thisDisplacedVtx.isConv()) )
           continue;
 
         jAssociationCounter++;
@@ -691,11 +688,11 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       if ( foundAssociated )
       {
         MC_TrkV_isAssociatedPF->push_back( true );
-        MC_TrkV_associationPFDVIdx->push_back( jAssociationCounterLast ); /// This will match the association in the output ntuple
-        MC_TrkV_associationPFDV_deltaR2d->push_back( deltaR_Ass ); /// deltaR 2d: xy
-        MC_TrkV_associationPFDV_deltaR3d->push_back( distance3D_Ass ); /// deltaR 3d: xyz
-        MC_TrkV_associationPFDV_deltaR3dPerpendicular->push_back( distance3DPerpendicular_Ass ); /// deltaR 3d: Perpendicular to vertex
-        MC_TrkV_associationPFDV_deltaR3dParallel->push_back( distance3DParallel_Ass ); /// deltaR 3d: Parallel to vertex
+        MC_TrkV_associationPCIdx->push_back( jAssociationCounterLast ); /// This will match the association in the output ntuple
+        MC_TrkV_associationPC_deltaR2d->push_back( deltaR_Ass ); /// deltaR 2d: xy
+        MC_TrkV_associationPC_deltaR3d->push_back( distance3D_Ass ); /// deltaR 3d: xyz
+        MC_TrkV_associationPC_deltaR3dPerpendicular->push_back( distance3DPerpendicular_Ass ); /// deltaR 3d: Perpendicular to vertex
+        MC_TrkV_associationPC_deltaR3dParallel->push_back( distance3DParallel_Ass ); /// deltaR 3d: Parallel to vertex
 
 /*
         MC_TrkV_associationDeltaPt->push_back( deltaPt );
@@ -723,11 +720,11 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       else
       {
         MC_TrkV_isAssociatedPF->push_back( false );
-        MC_TrkV_associationPFDVIdx->push_back( 0 );
-        MC_TrkV_associationPFDV_deltaR2d->push_back( deltaR_Ass ); /// deltaR 2d: xy
-        MC_TrkV_associationPFDV_deltaR3d->push_back( distance3D_Ass ); /// deltaR 3d: xyz
-        MC_TrkV_associationPFDV_deltaR3dPerpendicular->push_back( distance3DPerpendicular_Ass ); /// deltaR 3d: Perpendicular to vertex
-        MC_TrkV_associationPFDV_deltaR3dParallel->push_back( distance3DParallel_Ass ); /// deltaR 3d: Parallel to vertex
+        MC_TrkV_associationPCIdx->push_back( 0 );
+        MC_TrkV_associationPC_deltaR2d->push_back( deltaR_Ass ); /// deltaR 2d: xy
+        MC_TrkV_associationPC_deltaR3d->push_back( distance3D_Ass ); /// deltaR 3d: xyz
+        MC_TrkV_associationPC_deltaR3dPerpendicular->push_back( distance3DPerpendicular_Ass ); /// deltaR 3d: Perpendicular to vertex
+        MC_TrkV_associationPC_deltaR3dParallel->push_back( distance3DParallel_Ass ); /// deltaR 3d: Parallel to vertex
 /*
         MC_TrkV_associationDeltaPt->push_back( 0.0 );
         MC_TrkV_associationDeltaPhi->push_back( 0.0 );
@@ -757,61 +754,61 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   /// From now on, everything is purely reco
 
   /// Prepare PF Displaced Vertices
-  PFDV_x->clear();
-  PFDV_y->clear();
-  PFDV_z->clear();
-  PFDV_momentumInc_pt->clear();
-  PFDV_Inc_charge->clear();
-  PFDV_momentumInc_phi->clear();
-  PFDV_momentumInc_theta->clear();
-  PFDV_momentumOut_pt->clear();
-  PFDV_momentumOut_phi->clear();
-  PFDV_momentumOut_theta->clear();
-  PFDV_momentumOut_mass->clear();
-  PFDV_momentumOut_numberOfTracks->clear();
-  PFDV_numberOfTracks_0p0->clear();
-  PFDV_numberOfTracks_0p2->clear();
-  PFDV_numberOfTracks_0p5->clear();
-  PFDV_numberOfTracks_1p0->clear();
-  PFDV_numberOfTracks_Out0p0->clear();
-  PFDV_numberOfTracks_Out0p2->clear();
-  PFDV_numberOfTracks_Out0p5->clear();
-  PFDV_numberOfTracks_Out1p0->clear();
-  PFDV_isNuclear->clear();
-  PFDV_isNuclearLoose->clear();
-  PFDV_isNuclearKink->clear();
-  PFDV_isK0->clear();
-  PFDV_isLambda->clear();
-  PFDV_isLambdaBar->clear();
-  PFDV_isKPlusLoose->clear();
-  PFDV_isKMinusLoose->clear();
-  PFDV_isConversionLoose->clear();
-  PFDV_isLooper->clear();
-  PFDV_isFake->clear();
-  PFDV_isTherePrimaryTrack->clear();
-  PFDV_isThereMergedTrack->clear();
-  PFDV_isAssociatedMC->clear();
-  PFDV_deltaR3d_Associated->clear();
-  PFDV_deltaR2d_Associated->clear();
-  PFDV_associationMC_TrkVIdx->clear();
-  PFDV_vTrack_algo->clear();
-  PFDV_vTrack_pt->clear();
-  PFDV_vTrack_eta->clear();
-  PFDV_vTrack_phi->clear();
-  PFDV_vTrack_chi2->clear();
-  PFDV_vTrack_normalizedChi2->clear();
-  //PFDV_vTrack_isHighPurity->clear();
-  PFDV_vTrack_rho->clear();
-  PFDV_vTrack_numberOfValidHits->clear();
-  PFDV_vTrack_numberOfExpectedOuterHits->clear();
-  PFDV_vTrack_closestDxyPVIdx->clear();
-  PFDV_vTrack_closestDxyPVIdx_dxy->clear();
-  PFDV_vTrack_closestDxyPVIdx_dz->clear();
-  PFDV_vTrack_closestDzPVIdx->clear();
-  PFDV_vTrack_closestDzPVIdx_dxy->clear();
-  PFDV_vTrack_closestDzPVIdx_dz->clear();
+  PC_x->clear();
+  PC_y->clear();
+  PC_z->clear();
+  PC_momentumInc_pt->clear();
+  PC_Inc_charge->clear();
+  PC_momentumInc_phi->clear();
+  PC_momentumInc_theta->clear();
+  PC_momentumOut_pt->clear();
+  PC_momentumOut_phi->clear();
+  PC_momentumOut_theta->clear();
+  PC_momentumOut_mass->clear();
+  PC_momentumOut_numberOfTracks->clear();
+  PC_numberOfTracks_0p0->clear();
+  PC_numberOfTracks_0p2->clear();
+  PC_numberOfTracks_0p5->clear();
+  PC_numberOfTracks_1p0->clear();
+  PC_numberOfTracks_Out0p0->clear();
+  PC_numberOfTracks_Out0p2->clear();
+  PC_numberOfTracks_Out0p5->clear();
+  PC_numberOfTracks_Out1p0->clear();
+  PC_isNuclear->clear();
+  PC_isNuclearLoose->clear();
+  PC_isNuclearKink->clear();
+  PC_isK0->clear();
+  PC_isLambda->clear();
+  PC_isLambdaBar->clear();
+  PC_isKPlusLoose->clear();
+  PC_isKMinusLoose->clear();
+  PC_isConversionLoose->clear();
+  PC_isLooper->clear();
+  PC_isFake->clear();
+  PC_isTherePrimaryTrack->clear();
+  PC_isThereMergedTrack->clear();
+  PC_isAssociatedMC->clear();
+  PC_deltaR3d_Associated->clear();
+  PC_deltaR2d_Associated->clear();
+  PC_associationMC_TrkVIdx->clear();
+  PC_vTrack_algo->clear();
+  PC_vTrack_pt->clear();
+  PC_vTrack_eta->clear();
+  PC_vTrack_phi->clear();
+  PC_vTrack_chi2->clear();
+  PC_vTrack_normalizedChi2->clear();
+  //PC_vTrack_isHighPurity->clear();
+  PC_vTrack_rho->clear();
+  PC_vTrack_numberOfValidHits->clear();
+  PC_vTrack_numberOfExpectedOuterHits->clear();
+  PC_vTrack_closestDxyPVIdx->clear();
+  PC_vTrack_closestDxyPVIdx_dxy->clear();
+  PC_vTrack_closestDxyPVIdx_dz->clear();
+  PC_vTrack_closestDzPVIdx->clear();
+  PC_vTrack_closestDzPVIdx_dxy->clear();
+  PC_vTrack_closestDzPVIdx_dz->clear();
 
-  numberOfPFDV = 0;
+  numberOfPC = 0;
   int NumberOfLooseNuclearVertex = 0;
   int NumberOfNuclearVertex = 0;
   bool FlagLess3TracksFromVertex = false; FlagLess3TracksFromVertex = FlagLess3TracksFromVertex; 
@@ -823,44 +820,45 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     if ( thisDisplacedVtx.isFake() )
       continue;
     // select only Nuclear Interection vetices with high quality
-    if (!(thisDisplacedVtx.isNucl()) )
+    //if (!(thisDisplacedVtx.isNucl()) )
+	if(!(thisDisplacedVtx.isConv()))
       continue;
 
-    numberOfPFDV++;
+    numberOfPC++;
 
-    PFDV_x->push_back( thisDisplacedVtx.position().x() );
-    PFDV_y->push_back( thisDisplacedVtx.position().y() );
-    PFDV_z->push_back( thisDisplacedVtx.position().z() );
+    PC_x->push_back( thisDisplacedVtx.position().x() );
+    PC_y->push_back( thisDisplacedVtx.position().y() );
+    PC_z->push_back( thisDisplacedVtx.position().z() );
 
     /// Inbound and outbound momenta
     const math::XYZTLorentzVector thisRecMomentumInc = thisDisplacedVtx.primaryMomentum("PI", false, 0.0);
     const math::XYZTLorentzVector thisRecMomentumOut = thisDisplacedVtx.secondaryMomentum("PI", true, 0.0);
 
-    PFDV_momentumInc_pt->push_back( sqrt( thisRecMomentumInc.Perp2() ) );
-    PFDV_momentumInc_phi->push_back( thisRecMomentumInc.Phi() );
-    PFDV_momentumInc_theta->push_back( thisRecMomentumInc.Theta() );
-    PFDV_momentumOut_pt->push_back( sqrt( thisRecMomentumOut.Perp2() ) );
-    PFDV_momentumOut_phi->push_back( thisRecMomentumOut.Phi() );
-    PFDV_momentumOut_theta->push_back( thisRecMomentumOut.Theta() );
-    PFDV_momentumOut_mass->push_back( thisRecMomentumOut.mass() );
-    PFDV_momentumOut_numberOfTracks->push_back( thisDisplacedVtx.nSecondaryTracks() );
+    PC_momentumInc_pt->push_back( sqrt( thisRecMomentumInc.Perp2() ) );
+    PC_momentumInc_phi->push_back( thisRecMomentumInc.Phi() );
+    PC_momentumInc_theta->push_back( thisRecMomentumInc.Theta() );
+    PC_momentumOut_pt->push_back( sqrt( thisRecMomentumOut.Perp2() ) );
+    PC_momentumOut_phi->push_back( thisRecMomentumOut.Phi() );
+    PC_momentumOut_theta->push_back( thisRecMomentumOut.Theta() );
+    PC_momentumOut_mass->push_back( thisRecMomentumOut.mass() );
+    PC_momentumOut_numberOfTracks->push_back( thisDisplacedVtx.nSecondaryTracks() );
 
-    PFDV_isNuclear->push_back( thisDisplacedVtx.isNucl() ); 
-    PFDV_isNuclearLoose->push_back( thisDisplacedVtx.isNucl_Loose() );
-    PFDV_isNuclearKink->push_back( thisDisplacedVtx.isNucl_Kink() );
-    PFDV_isK0->push_back( thisDisplacedVtx.isK0() );
-    PFDV_isLambda->push_back( thisDisplacedVtx.isLambda() );
-    PFDV_isLambdaBar->push_back( thisDisplacedVtx.isLambdaBar() );
-    PFDV_isKPlusLoose->push_back( thisDisplacedVtx.isKplus_Loose() );
-    PFDV_isKMinusLoose->push_back( thisDisplacedVtx.isKminus_Loose() );
-    PFDV_isConversionLoose->push_back( thisDisplacedVtx.isConv_Loose() );
-    PFDV_isLooper->push_back( thisDisplacedVtx.isLooper() );
-    PFDV_isFake->push_back( thisDisplacedVtx.isFake() );
-    PFDV_isTherePrimaryTrack->push_back( thisDisplacedVtx.isTherePrimaryTracks() );
-    PFDV_isThereMergedTrack->push_back( thisDisplacedVtx.isThereMergedTracks() );
+    PC_isNuclear->push_back( thisDisplacedVtx.isNucl() ); 
+    PC_isNuclearLoose->push_back( thisDisplacedVtx.isNucl_Loose() );
+    PC_isNuclearKink->push_back( thisDisplacedVtx.isNucl_Kink() );
+    PC_isK0->push_back( thisDisplacedVtx.isK0() );
+    PC_isLambda->push_back( thisDisplacedVtx.isLambda() );
+    PC_isLambdaBar->push_back( thisDisplacedVtx.isLambdaBar() );
+    PC_isKPlusLoose->push_back( thisDisplacedVtx.isKplus_Loose() );
+    PC_isKMinusLoose->push_back( thisDisplacedVtx.isKminus_Loose() );
+    PC_isConversionLoose->push_back( thisDisplacedVtx.isConv_Loose() );
+    PC_isLooper->push_back( thisDisplacedVtx.isLooper() );
+    PC_isFake->push_back( thisDisplacedVtx.isFake() );
+    PC_isTherePrimaryTrack->push_back( thisDisplacedVtx.isTherePrimaryTracks() );
+    PC_isThereMergedTrack->push_back( thisDisplacedVtx.isThereMergedTracks() );
 
-    if(PFDV_isNuclear)NumberOfNuclearVertex++;
-    if(PFDV_isNuclearLoose)NumberOfLooseNuclearVertex++;
+    if(PC_isNuclear)NumberOfNuclearVertex++;
+    if(PC_isNuclearLoose)NumberOfLooseNuclearVertex++;
   
     /// Find association with Tracking Vertices
     double deltaR  = 999;
@@ -945,17 +943,17 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     /// Note that if we are running on reco, foundAssociated == false, hence we can do this
     if ( foundAssociated )
     {
-      PFDV_isAssociatedMC->push_back( true );
-      PFDV_deltaR2d_Associated->push_back( deltaR_Ass );
-      PFDV_deltaR3d_Associated->push_back( distance3D_Ass );
-      PFDV_associationMC_TrkVIdx->push_back( jAssociationCounterLast ); /// This will match the association in the output ntuple
+      PC_isAssociatedMC->push_back( true );
+      PC_deltaR2d_Associated->push_back( deltaR_Ass );
+      PC_deltaR3d_Associated->push_back( distance3D_Ass );
+      PC_associationMC_TrkVIdx->push_back( jAssociationCounterLast ); /// This will match the association in the output ntuple
     }
     else // don't find assosication
     {
-      PFDV_isAssociatedMC->push_back( false );
-      PFDV_deltaR2d_Associated->push_back( deltaR_Ass );
-      PFDV_deltaR3d_Associated->push_back( distance3D_Ass );
-      PFDV_associationMC_TrkVIdx->push_back( 0 );
+      PC_isAssociatedMC->push_back( false );
+      PC_deltaR2d_Associated->push_back( deltaR_Ass );
+      PC_deltaR3d_Associated->push_back( distance3D_Ass );
+      PC_associationMC_TrkVIdx->push_back( 0 );
     }
 
     /// Tracks
@@ -976,14 +974,14 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     std::vector< double > vTrack_closestDzPVIdx_dxy;               vTrack_closestDzPVIdx_dxy.clear();
     std::vector< double > vTrack_closestDzPVIdx_dz;                vTrack_closestDzPVIdx_dz.clear();
 
-    unsigned int nTrackingParticles_PFDV_0p0 = 0;
-    unsigned int nTrackingParticles_PFDV_0p2 = 0;
-    unsigned int nTrackingParticles_PFDV_0p5 = 0;
-    unsigned int nTrackingParticles_PFDV_1p0 = 0;
-    unsigned int nTrackingParticles_PFDV_Out0p0 = 0;
-    unsigned int nTrackingParticles_PFDV_Out0p2 = 0;
-    unsigned int nTrackingParticles_PFDV_Out0p5 = 0;
-    unsigned int nTrackingParticles_PFDV_Out1p0 = 0;
+    unsigned int nTrackingParticles_PC_0p0 = 0;
+    unsigned int nTrackingParticles_PC_0p2 = 0;
+    unsigned int nTrackingParticles_PC_0p5 = 0;
+    unsigned int nTrackingParticles_PC_1p0 = 0;
+    unsigned int nTrackingParticles_PC_Out0p0 = 0;
+    unsigned int nTrackingParticles_PC_Out0p2 = 0;
+    unsigned int nTrackingParticles_PC_Out0p5 = 0;
+    unsigned int nTrackingParticles_PC_Out1p0 = 0;
     double Source_Charge = -10.;
 
     reco::Vertex::trackRef_iterator trackDisplacedVertex;
@@ -1011,17 +1009,17 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 
         if( fabs((*trackDisplacedVertex)->charge()) > 2.5) continue;// reject particle out of detector acceptence 
 
-        nTrackingParticles_PFDV_0p0++;
-        if(Flag_SecondaryTrack) nTrackingParticles_PFDV_Out0p0++;
+        nTrackingParticles_PC_0p0++;
+        if(Flag_SecondaryTrack) nTrackingParticles_PC_Out0p0++;
 
-        if( (*trackDisplacedVertex)->pt() > 0.2 ) nTrackingParticles_PFDV_0p2++;
-        if( (*trackDisplacedVertex)->pt() > 0.5 ) nTrackingParticles_PFDV_0p5++;
-        if( (*trackDisplacedVertex)->pt() > 1.0 ) nTrackingParticles_PFDV_1p0++;
+        if( (*trackDisplacedVertex)->pt() > 0.2 ) nTrackingParticles_PC_0p2++;
+        if( (*trackDisplacedVertex)->pt() > 0.5 ) nTrackingParticles_PC_0p5++;
+        if( (*trackDisplacedVertex)->pt() > 1.0 ) nTrackingParticles_PC_1p0++;
  
         if(Flag_SecondaryTrack) {
-           if( (*trackDisplacedVertex)->pt() > 0.2 ) nTrackingParticles_PFDV_Out0p2++;
-           if( (*trackDisplacedVertex)->pt() > 0.5 ) nTrackingParticles_PFDV_Out0p5++;
-           if( (*trackDisplacedVertex)->pt() > 1.0 ) nTrackingParticles_PFDV_Out1p0++;
+           if( (*trackDisplacedVertex)->pt() > 0.2 ) nTrackingParticles_PC_Out0p2++;
+           if( (*trackDisplacedVertex)->pt() > 0.5 ) nTrackingParticles_PC_Out0p5++;
+           if( (*trackDisplacedVertex)->pt() > 1.0 ) nTrackingParticles_PC_Out1p0++;
         }
       /// New Track!
       vTrack_pt.push_back( (*trackDisplacedVertex)->pt() );
@@ -1073,42 +1071,42 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       vTrack_closestDzPVIdx_dxy.push_back( dxyMinDz );
     }
 
-    if(nTrackingParticles_PFDV_0p0 < 3) thisDisplacedVtx.Dump();
-    if(nTrackingParticles_PFDV_0p0 < 3) FlagLess3TracksFromVertex = true;
-    PFDV_numberOfTracks_0p0->push_back( nTrackingParticles_PFDV_0p0 );
-    PFDV_numberOfTracks_0p2->push_back( nTrackingParticles_PFDV_0p2 );
-    PFDV_numberOfTracks_0p5->push_back( nTrackingParticles_PFDV_0p5 );
-    PFDV_numberOfTracks_1p0->push_back( nTrackingParticles_PFDV_1p0 );
-    PFDV_numberOfTracks_Out0p0->push_back( nTrackingParticles_PFDV_Out0p0 );
-    PFDV_numberOfTracks_Out0p2->push_back( nTrackingParticles_PFDV_Out0p2 );
-    PFDV_numberOfTracks_Out0p5->push_back( nTrackingParticles_PFDV_Out0p5 );
-    PFDV_numberOfTracks_Out1p0->push_back( nTrackingParticles_PFDV_Out1p0 );
+    if(nTrackingParticles_PC_0p0 < 3) thisDisplacedVtx.Dump();
+    if(nTrackingParticles_PC_0p0 < 3) FlagLess3TracksFromVertex = true;
+/*    PC_numberOfTracks_0p0->push_back( nTrackingParticles_PC_0p0 );
+    PC_numberOfTracks_0p2->push_back( nTrackingParticles_PC_0p2 );
+    PC_numberOfTracks_0p5->push_back( nTrackingParticles_PC_0p5 );
+    PC_numberOfTracks_1p0->push_back( nTrackingParticles_PC_1p0 );
+    PC_numberOfTracks_Out0p0->push_back( nTrackingParticles_PC_Out0p0 );
+    PC_numberOfTracks_Out0p2->push_back( nTrackingParticles_PC_Out0p2 );
+    PC_numberOfTracks_Out0p5->push_back( nTrackingParticles_PC_Out0p5 );
+    PC_numberOfTracks_Out1p0->push_back( nTrackingParticles_PC_Out1p0 );
+*/
+    PC_Inc_charge->push_back( Source_Charge );
 
-    PFDV_Inc_charge->push_back( Source_Charge );
-
-    PFDV_vTrack_algo->push_back( vTrack_algo );
-    PFDV_vTrack_pt->push_back( vTrack_pt );
-    PFDV_vTrack_eta->push_back( vTrack_eta );
-    PFDV_vTrack_phi->push_back( vTrack_phi );
-    PFDV_vTrack_chi2->push_back( vTrack_chi2 );
-    PFDV_vTrack_normalizedChi2->push_back( vTrack_normalizedChi2 );
-    //PFDV_vTrack_isHighPurity->push_back( vTrack_isHighPurity );
-    PFDV_vTrack_rho->push_back( vTrack_rho );
-    PFDV_vTrack_numberOfValidHits->push_back( vTrack_numberOfValidHits );
-    PFDV_vTrack_numberOfExpectedOuterHits->push_back( vTrack_numberOfExpectedOuterHits );
-    PFDV_vTrack_closestDxyPVIdx->push_back( vTrack_closestDxyPVIdx );
-    PFDV_vTrack_closestDxyPVIdx_dxy->push_back( vTrack_closestDxyPVIdx_dxy );
-    PFDV_vTrack_closestDxyPVIdx_dz->push_back( vTrack_closestDxyPVIdx_dz );
-    PFDV_vTrack_closestDzPVIdx->push_back( vTrack_closestDzPVIdx );
-    PFDV_vTrack_closestDzPVIdx_dxy->push_back( vTrack_closestDzPVIdx_dxy );
-    PFDV_vTrack_closestDzPVIdx_dz->push_back( vTrack_closestDzPVIdx_dz );
+    PC_vTrack_algo->push_back( vTrack_algo );
+    PC_vTrack_pt->push_back( vTrack_pt );
+    PC_vTrack_eta->push_back( vTrack_eta );
+    PC_vTrack_phi->push_back( vTrack_phi );
+    PC_vTrack_chi2->push_back( vTrack_chi2 );
+    PC_vTrack_normalizedChi2->push_back( vTrack_normalizedChi2 );
+    //PC_vTrack_isHighPurity->push_back( vTrack_isHighPurity );
+    PC_vTrack_rho->push_back( vTrack_rho );
+    PC_vTrack_numberOfValidHits->push_back( vTrack_numberOfValidHits );
+    PC_vTrack_numberOfExpectedOuterHits->push_back( vTrack_numberOfExpectedOuterHits );
+    PC_vTrack_closestDxyPVIdx->push_back( vTrack_closestDxyPVIdx );
+    PC_vTrack_closestDxyPVIdx_dxy->push_back( vTrack_closestDxyPVIdx_dxy );
+    PC_vTrack_closestDxyPVIdx_dz->push_back( vTrack_closestDxyPVIdx_dz );
+    PC_vTrack_closestDzPVIdx->push_back( vTrack_closestDzPVIdx );
+    PC_vTrack_closestDzPVIdx_dxy->push_back( vTrack_closestDzPVIdx_dxy );
+    PC_vTrack_closestDzPVIdx_dz->push_back( vTrack_closestDzPVIdx_dz );
   }
 
 //if (NumberOfLooseNuclearVertex > 0) std:cout << "NumberOfLooseNuclearVertex = " << NumberOfLooseNuclearVertex << " NumberOfNuclearVertex = " << NumberOfNuclearVertex << std::endl;
 if (FlagLess3TracksFromVertex) std::cout << "NumberOfLooseNuclearVertex = " << NumberOfLooseNuclearVertex << " NumberOfNuclearVertex = " << NumberOfNuclearVertex << std::endl;
 
   /// Fill Output Tree for MC all the time, for Data if we have RECO NI vertex
- if( (!isRealData) || (isRealData && numberOfPFDV > 0) )  outputTree->Fill();
+ if( (!isRealData) || (isRealData && numberOfPC > 0) )  outputTree->Fill();
 }
 
 /* Additional methods */

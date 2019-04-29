@@ -115,12 +115,13 @@ class NtupleMakerPhotonConversions : public edm::EDAnalyzer
     double BS_yWidth;
 
     ///PC Variables
-    unsigned int numPC{};
+/*    unsigned int numPC{};
     std::vector<double> *PCDV_x;
     std::vector<double> *PCDV_y;
     std::vector<double> *PCDV_z;
     std::vector<double> *PCDV_InvMass;
     std::vector<double> *PCDV_CotTheta;
+*/
 
     /// Tracking Vertices
     unsigned int numberOfMC_TrkV;
@@ -146,11 +147,11 @@ class NtupleMakerPhotonConversions : public edm::EDAnalyzer
     std::vector< unsigned int > *MC_TrkV_numberOfChargedParticles_Out0p5;
     std::vector< unsigned int > *MC_TrkV_numberOfChargedParticles_Out1p0;
     std::vector< bool > *MC_TrkV_isAssociatedPF;
-    std::vector< unsigned int > *MC_TrkV_associationPFDVIdx;
-    std::vector< double > *MC_TrkV_associationPFDV_deltaR2d;
-    std::vector< double > *MC_TrkV_associationPFDV_deltaR3d;
-    std::vector< double > *MC_TrkV_associationPFDV_deltaR3dPerpendicular;
-    std::vector< double > *MC_TrkV_associationPFDV_deltaR3dParallel;
+    std::vector< unsigned int > *MC_TrkV_associationPCIdx;
+    std::vector< double > *MC_TrkV_associationPC_deltaR2d;
+    std::vector< double > *MC_TrkV_associationPC_deltaR3d;
+    std::vector< double > *MC_TrkV_associationPC_deltaR3dPerpendicular;
+    std::vector< double > *MC_TrkV_associationPC_deltaR3dParallel;
 /*
     std::vector< double > *MC_TrkV_associationDeltaPt;
     std::vector< double > *MC_TrkV_associationDeltaPhi;
@@ -174,60 +175,53 @@ class NtupleMakerPhotonConversions : public edm::EDAnalyzer
 */
 
     /// Displaced Vertices
-    unsigned int numberOfPFDV;
-    std::vector< double > *PFDV_x;
-    std::vector< double > *PFDV_y;
-    std::vector< double > *PFDV_z;
-    std::vector< double > *PFDV_momentumInc_pt;
-    std::vector< double > *PFDV_Inc_charge;
-    std::vector< double > *PFDV_momentumInc_phi;
-    std::vector< double > *PFDV_momentumInc_theta;
-    std::vector< double > *PFDV_momentumOut_pt;
-    std::vector< double > *PFDV_momentumOut_phi;
-    std::vector< double > *PFDV_momentumOut_theta;
-    std::vector< double > *PFDV_momentumOut_mass;
-    std::vector< unsigned int > *PFDV_momentumOut_numberOfTracks;
-    std::vector< unsigned int > *PFDV_numberOfTracks_0p0;
-    std::vector< unsigned int > *PFDV_numberOfTracks_0p2;
-    std::vector< unsigned int > *PFDV_numberOfTracks_0p5;
-    std::vector< unsigned int > *PFDV_numberOfTracks_1p0;
-    std::vector< unsigned int > *PFDV_numberOfTracks_Out0p0;
-    std::vector< unsigned int > *PFDV_numberOfTracks_Out0p2;
-    std::vector< unsigned int > *PFDV_numberOfTracks_Out0p5;
-    std::vector< unsigned int > *PFDV_numberOfTracks_Out1p0;
-    std::vector< bool > *PFDV_isNuclear;
-    std::vector< bool > *PFDV_isNuclearLoose;
-    std::vector< bool > *PFDV_isNuclearKink;
-    std::vector< bool > *PFDV_isK0;
-    std::vector< bool > *PFDV_isLambda;
-    std::vector< bool > *PFDV_isLambdaBar;
-    std::vector< bool > *PFDV_isKPlusLoose;
-    std::vector< bool > *PFDV_isKMinusLoose;
-    std::vector< bool > *PFDV_isConversionLoose;
-    std::vector< bool > *PFDV_isLooper;
-    std::vector< bool > *PFDV_isFake;
-    std::vector< bool > *PFDV_isTherePrimaryTrack;
-    std::vector< bool > *PFDV_isThereMergedTrack;
-    std::vector< bool > *PFDV_isAssociatedMC;
-    std::vector< double > *PFDV_deltaR3d_Associated;
-    std::vector< double > *PFDV_deltaR2d_Associated;
-    std::vector< unsigned int > *PFDV_associationMC_TrkVIdx;
-    std::vector< std::vector< int > > *PFDV_vTrack_algo;
-    std::vector< std::vector< double > > *PFDV_vTrack_pt;
-    std::vector< std::vector< double > > *PFDV_vTrack_eta;
-    std::vector< std::vector< double > > *PFDV_vTrack_phi;
-    std::vector< std::vector< double > > *PFDV_vTrack_chi2;
-    std::vector< std::vector< double > > *PFDV_vTrack_normalizedChi2;
-    //std::vector< std::vector< bool > > *PFDV_vTrack_isHighPurity;
-    std::vector< std::vector< double > > *PFDV_vTrack_rho;
-    std::vector< std::vector< unsigned int > > *PFDV_vTrack_numberOfValidHits;
-    std::vector< std::vector< unsigned int > > *PFDV_vTrack_numberOfExpectedOuterHits;
-    std::vector< std::vector< unsigned int > > *PFDV_vTrack_closestDxyPVIdx;
-    std::vector< std::vector< double > > *PFDV_vTrack_closestDxyPVIdx_dxy;
-    std::vector< std::vector< double > > *PFDV_vTrack_closestDxyPVIdx_dz;
-    std::vector< std::vector< unsigned int > > *PFDV_vTrack_closestDzPVIdx;
-    std::vector< std::vector< double > > *PFDV_vTrack_closestDzPVIdx_dxy;
-    std::vector< std::vector< double > > *PFDV_vTrack_closestDzPVIdx_dz;
+    unsigned int numberOfPC;
+    std::vector< double > *PC_x;
+    std::vector< double > *PC_y;
+    std::vector< double > *PC_z;
+    std::vector< double > *PC_momentumInc_pt;
+    std::vector< double > *PC_Inc_charge;
+    std::vector< double > *PC_momentumInc_phi;
+    std::vector< double > *PC_momentumInc_theta;
+    std::vector< double > *PC_momentumOut_pt;
+    std::vector< double > *PC_momentumOut_phi;
+    std::vector< double > *PC_momentumOut_theta;
+    std::vector< double > *PC_momentumOut_mass;
+    std::vector< unsigned int > *PC_momentumOut_numberOfTracks;
+
+    std::vector< bool > *PC_isNuclear;
+    std::vector< bool > *PC_isNuclearLoose;
+    std::vector< bool > *PC_isNuclearKink;
+    std::vector< bool > *PC_isK0;
+    std::vector< bool > *PC_isLambda;
+    std::vector< bool > *PC_isLambdaBar;
+    std::vector< bool > *PC_isKPlusLoose;
+    std::vector< bool > *PC_isKMinusLoose;
+    std::vector< bool > *PC_isConversionLoose;
+    std::vector< bool > *PC_isLooper;
+    std::vector< bool > *PC_isFake;
+    std::vector< bool > *PC_isTherePrimaryTrack;
+    std::vector< bool > *PC_isThereMergedTrack;
+    std::vector< bool > *PC_isAssociatedMC;
+    std::vector< double > *PC_deltaR3d_Associated;
+    std::vector< double > *PC_deltaR2d_Associated;
+    std::vector< unsigned int > *PC_associationMC_TrkVIdx;
+    std::vector< std::vector< int > > *PC_vTrack_algo;
+    std::vector< std::vector< double > > *PC_vTrack_pt;
+    std::vector< std::vector< double > > *PC_vTrack_eta;
+    std::vector< std::vector< double > > *PC_vTrack_phi;
+    std::vector< std::vector< double > > *PC_vTrack_chi2;
+    std::vector< std::vector< double > > *PC_vTrack_normalizedChi2;
+    //std::vector< std::vector< bool > > *PC_vTrack_isHighPurity;
+    std::vector< std::vector< double > > *PC_vTrack_rho;
+    std::vector< std::vector< unsigned int > > *PC_vTrack_numberOfValidHits;
+    std::vector< std::vector< unsigned int > > *PC_vTrack_numberOfExpectedOuterHits;
+    std::vector< std::vector< unsigned int > > *PC_vTrack_closestDxyPVIdx;
+    std::vector< std::vector< double > > *PC_vTrack_closestDxyPVIdx_dxy;
+    std::vector< std::vector< double > > *PC_vTrack_closestDxyPVIdx_dz;
+    std::vector< std::vector< unsigned int > > *PC_vTrack_closestDzPVIdx;
+    std::vector< std::vector< double > > *PC_vTrack_closestDzPVIdx_dxy;
+    std::vector< std::vector< double > > *PC_vTrack_closestDzPVIdx_dz;
 };
 
 #endif
