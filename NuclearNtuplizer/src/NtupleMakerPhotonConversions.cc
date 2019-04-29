@@ -1006,10 +1006,10 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 
         if(thisDisplacedVtx.isPrimaryTrack((*trackDisplacedVertex)) || thisDisplacedVtx.isMergedTrack((*trackDisplacedVertex))) 
           Source_Charge = (*trackDisplacedVertex)->charge();
-        if ( (*trackDisplacedVertex)->charge() == 0 ) //reject nuetral particles
-        continue;
+      //  if ( (*trackDisplacedVertex)->charge() == 0 ) //reject nuetral particles
+      //  continue;
 
-        if( fabs((*trackDisplacedVertex)->charge()) > 2.5) continue;// reject particle out of detector acceptence 
+   //     if( fabs((*trackDisplacedVertex)->charge()) > 2.5) continue;// reject particle out of detector acceptence  //BUG?? 
 
         nTrackingParticles_PC_0p0++;
         if(Flag_SecondaryTrack) nTrackingParticles_PC_Out0p0++;
