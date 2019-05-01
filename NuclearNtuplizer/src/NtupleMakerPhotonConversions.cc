@@ -179,6 +179,8 @@ void NtupleMakerPhotonConversions::beginJob()
   PC_vTrack_closestDzPVIdx_dxy = new std::vector< std::vector< double > >;
   PC_vTrack_closestDzPVIdx_dz = new std::vector< std::vector< double > >;
 
+  numberOfPFPC=0;
+
   // TFileService
   edm::Service< TFileService > fs;
 
@@ -227,7 +229,7 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "BS_yWidth", &BS_yWidth, "BS_yWidth/D" );
 
   /// Branches for Tracking Vertices
-  outputTree->Branch( "numberOfMC_TrkV", &numberOfMC_TrkV, "numberOfMC_TrkV/i" );
+/*  outputTree->Branch( "numberOfMC_TrkV", &numberOfMC_TrkV, "numberOfMC_TrkV/i" );
   outputTree->Branch( "MC_TrkV_isNuclearInteraction", "std::vector< bool >", &MC_TrkV_isNuclearInteraction );
   outputTree->Branch( "MC_TrkV_isKaonDecay", "std::vector< bool >", &MC_TrkV_isKaonDecay );
   outputTree->Branch( "MC_TrkV_isConversion", "std::vector< bool >", &MC_TrkV_isConversion );
@@ -255,6 +257,7 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "MC_TrkV_associationPC_deltaR3d", "std::vector< double >", &MC_TrkV_associationPC_deltaR3d );
   outputTree->Branch( "MC_TrkV_associationPC_deltaR3dPerpendicular", "std::vector< double >", &MC_TrkV_associationPC_deltaR3dPerpendicular );
   outputTree->Branch( "MC_TrkV_associationPC_deltaR3dParallel", "std::vector< double >", &MC_TrkV_associationPC_deltaR3dParallel );
+*/
 /*
   outputTree->Branch( "MC_TrkV_associationDeltaPt", "std::vector< double >", &MC_TrkV_associationDeltaPt );
   outputTree->Branch( "MC_TrkV_associationDeltaPhi", "std::vector< double >", &MC_TrkV_associationDeltaPhi );
@@ -282,17 +285,17 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "PC_x", "std::vector< double >", &PC_x );
   outputTree->Branch( "PC_y", "std::vector< double >", &PC_y );
   outputTree->Branch( "PC_z", "std::vector< double >", &PC_z );
-  outputTree->Branch( "PC_momentumInc_pt", "std::vector< double >", &PC_momentumInc_pt );
-  outputTree->Branch( "PC_Inc_charge", "std::vector< double >", &PC_Inc_charge );
-  outputTree->Branch( "PC_momentumInc_phi", "std::vector< double >", &PC_momentumInc_phi );
-  outputTree->Branch( "PC_momentumInc_theta", "std::vector< double >", &PC_momentumInc_theta );
+//  outputTree->Branch( "PC_momentumInc_pt", "std::vector< double >", &PC_momentumInc_pt );
+//  outputTree->Branch( "PC_Inc_charge", "std::vector< double >", &PC_Inc_charge );
+//  outputTree->Branch( "PC_momentumInc_phi", "std::vector< double >", &PC_momentumInc_phi );
+//  outputTree->Branch( "PC_momentumInc_theta", "std::vector< double >", &PC_momentumInc_theta );
   outputTree->Branch( "PC_momentumOut_pt", "std::vector< double >", &PC_momentumOut_pt );
   outputTree->Branch( "PC_momentumOut_phi", "std::vector< double >", &PC_momentumOut_phi );
   outputTree->Branch( "PC_momentumOut_theta", "std::vector< double >", &PC_momentumOut_theta );
   outputTree->Branch( "PC_momentumOut_mass", "std::vector< double >", &PC_momentumOut_mass );
   outputTree->Branch( "PC_momentumOut_numberOfTracks", "std::vector< unsigned int >", &PC_momentumOut_numberOfTracks );
   
-  outputTree->Branch( "PC_isNuclear", "std::vector< bool >", &PC_isNuclear );
+/*  outputTree->Branch( "PC_isNuclear", "std::vector< bool >", &PC_isNuclear );
   outputTree->Branch( "PC_isNuclearLoose", "std::vector< bool >", &PC_isNuclearLoose );
   outputTree->Branch( "PC_isNuclearKink", "std::vector< bool >", &PC_isNuclearKink );
   outputTree->Branch( "PC_isK0", "std::vector< bool >", &PC_isK0 );
@@ -309,6 +312,7 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "PC_deltaR3d_Associated", "std::vector< double >", &PC_deltaR3d_Associated );
   outputTree->Branch( "PC_deltaR2d_Associated", "std::vector< double >", &PC_deltaR2d_Associated );
   outputTree->Branch( "PC_associationMC_TrkVIdx", "std::vector< unsigned int >", &PC_associationMC_TrkVIdx );
+*/
   outputTree->Branch( "PC_vTrack_algo", "std::vector< std::vector< int > >", &PC_vTrack_algo );
   outputTree->Branch( "PC_vTrack_pt", "std::vector< std::vector< double > >", &PC_vTrack_pt );
   outputTree->Branch( "PC_vTrack_eta", "std::vector< std::vector< double > >", &PC_vTrack_eta );
@@ -325,6 +329,8 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "PC_vTrack_closestDzPVIdx_dxy", "std::vector< std::vector< double > >", &PC_vTrack_closestDzPVIdx_dxy );
   outputTree->Branch( "PC_vTrack_closestDzPVIdx_dz", "std::vector< std::vector< double > >", &PC_vTrack_closestDzPVIdx_dz );
   //outputTree->Branch( "PC_vTrack_isHighPurity", "std::vector< std::vector< bool > >", &PC_vTrack_isHighPurity );
+
+  outputTree->Branch( "numberOfPFPC", &numberOfPFPC, "numberOfPFPC/i");
 }
 
 /* End Job */
@@ -818,10 +824,18 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 //  for ( unsigned int i = 0; i < displacedVtxHandle->size(); i++ )
 //  {
 
+	//check out pf conversions?
+	for(unsigned int i=0; i< dispalcedVtxHandle->size(); i++){
+		 reco::PFDisplacedVertex thispfDisplacedVtx = displacedVtxHandle->at(i);
+		if( thispfDisplacedVtx.isConv_Loose() || thispfDisplacedVtx.isConv() ){		
+			numberOfPFPC++;
+		} 
+	}
 
 	for(unsigned int i=0; i<conversionsHandle->size(); i++){
 
-    //reco::PFDisplacedVertex thisDisplacedVtx = displacedVtxHandle->at(i);
+   
+
 	reco::Vertex thisDisplacedVtx = conversionsHandle->at(i).conversionVertex();
 
     if ( thisDisplacedVtx.isFake() )

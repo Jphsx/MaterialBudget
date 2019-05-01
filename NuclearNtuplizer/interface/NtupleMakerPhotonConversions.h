@@ -222,6 +222,9 @@ class NtupleMakerPhotonConversions : public edm::EDAnalyzer
     std::vector< std::vector< unsigned int > > *PC_vTrack_closestDzPVIdx;
     std::vector< std::vector< double > > *PC_vTrack_closestDzPVIdx_dxy;
     std::vector< std::vector< double > > *PC_vTrack_closestDzPVIdx_dz;
+
+
+	unsigned int numberOfPFPC;
 };
 
 #endif
