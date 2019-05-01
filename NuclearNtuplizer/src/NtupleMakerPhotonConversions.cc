@@ -825,7 +825,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 //  {
 
 	//check out pf conversions?
-	for(unsigned int i=0; i< dispalcedVtxHandle->size(); i++){
+	for(unsigned int i=0; i< displacedVtxHandle->size(); i++){
 		 reco::PFDisplacedVertex thispfDisplacedVtx = displacedVtxHandle->at(i);
 		if( thispfDisplacedVtx.isConv_Loose() || thispfDisplacedVtx.isConv() ){		
 			numberOfPFPC++;
