@@ -846,7 +846,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 
 	//refitted pair is p4 from vertex.h, uses electron mass and weight cut of 0.5 weight is contribution to the vertex fit 
 	 const math::XYZTLorentzVectorF thisRecMomentumOut =  conversionsHandle->at(i).refittedPair4Momentum();
-    
+    //temp fix
+	const math::XYZTLorentzVectorF thisRecMomentumInc = thisRecMomentumOut;
 
    // PC_momentumInc_pt->push_back( sqrt( thisRecMomentumInc.Perp2() ) );
    // PC_momentumInc_phi->push_back( thisRecMomentumInc.Phi() );
