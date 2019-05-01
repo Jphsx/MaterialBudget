@@ -822,7 +822,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 	for(unsigned int i=0; i<conversionsHandle->size(); i++){
 
     //reco::PFDisplacedVertex thisDisplacedVtx = displacedVtxHandle->at(i);
-	reco::Vertex thisDisplacedVtx = conversionsHandle->at(i).ConversionVertex();
+	reco::Vertex thisDisplacedVtx = conversionsHandle->at(i).conversionVertex();
 
     if ( thisDisplacedVtx.isFake() )
       continue;
@@ -912,7 +912,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
         jAssociationCounter++;
 
         /// Calculate all possible forms of distance
-        const math::XYZTLorentzVector thisRecMomentumInc = thisDisplacedVtx.primaryMomentum("PI", false, 0.0);
+   //     const math::XYZTLorentzVector thisRecMomentumInc = thisDisplacedVtx.primaryMomentum("PI", false, 0.0);
         math::XYZVectorD thisSimMomentumInc = (*thisVtx.sourceTracks_begin())->momentum();
 
         deltaPt = sqrt(thisSimMomentumInc.Perp2()) - sqrt(thisRecMomentumInc.Perp2());
@@ -1087,7 +1087,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       vTrack_closestDzPVIdx_dxy.push_back( dxyMinDz );
     }
 
-    if(nTrackingParticles_PC_0p0 < 3) thisDisplacedVtx.Dump();
+ //   if(nTrackingParticles_PC_0p0 < 3) thisDisplacedVtx.Dump();
     if(nTrackingParticles_PC_0p0 < 3) FlagLess3TracksFromVertex = true;
 /*    PC_numberOfTracks_0p0->push_back( nTrackingParticles_PC_0p0 );
     PC_numberOfTracks_0p2->push_back( nTrackingParticles_PC_0p2 );
