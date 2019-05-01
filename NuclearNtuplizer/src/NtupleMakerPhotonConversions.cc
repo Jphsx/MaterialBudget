@@ -809,57 +809,71 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   PC_vTrack_closestDzPVIdx_dxy->clear();
   PC_vTrack_closestDzPVIdx_dz->clear();
 
+
   numberOfPC = 0;
   int NumberOfLooseNuclearVertex = 0;
   int NumberOfNuclearVertex = 0;
   bool FlagLess3TracksFromVertex = false; FlagLess3TracksFromVertex = FlagLess3TracksFromVertex; 
 
-  for ( unsigned int i = 0; i < displacedVtxHandle->size(); i++ )
-  {
-    reco::PFDisplacedVertex thisDisplacedVtx = displacedVtxHandle->at(i);
+//  for ( unsigned int i = 0; i < displacedVtxHandle->size(); i++ )
+//  {
+
+
+	for(unsigned int i=0; i<conversionsHandle->size(); i++){
+
+    //reco::PFDisplacedVertex thisDisplacedVtx = displacedVtxHandle->at(i);
+	reco::Vertex thisDisplacedVtx = conversionsHandle->at(i).ConversionVertex();
 
     if ( thisDisplacedVtx.isFake() )
       continue;
     // select only Nuclear Interection vetices with high quality
     //if (!(thisDisplacedVtx.isNucl()) )
-	if(!(thisDisplacedVtx.isConv()))
-      continue;
+	//if(!(thisDisplacedVtx.isConv()))
+     // continue;
 
     numberOfPC++;
 
-    PC_x->push_back( thisDisplacedVtx.position().x() );
-    PC_y->push_back( thisDisplacedVtx.position().y() );
-    PC_z->push_back( thisDisplacedVtx.position().z() );
+    //PC_x->push_back( thisDisplacedVtx.position().x() );
+  //  PC_y->push_back( thisDisplacedVtx.position().y() );
+   // PC_z->push_back( thisDisplacedVtx.position().z() );
+	PC_x->push_back( thisDisplacedVtx.x() );
+	PC_y->push_back( thisDisplacedVtx.y() );
+	PC_z->push_back( thisDisplacedVtx.z() );
 
     /// Inbound and outbound momenta
-    const math::XYZTLorentzVector thisRecMomentumInc = thisDisplacedVtx.primaryMomentum("PI", false, 0.0);
-    const math::XYZTLorentzVector thisRecMomentumOut = thisDisplacedVtx.secondaryMomentum("PI", true, 0.0);
+    //const math::XYZTLorentzVector thisRecMomentumInc = thisDisplacedVtx.primaryMomentum("PI", false, 0.0);
+    //const math::XYZTLorentzVector thisRecMomentumOut = thisDisplacedVtx.secondaryMomentum("PI", true, 0.0);
 
-    PC_momentumInc_pt->push_back( sqrt( thisRecMomentumInc.Perp2() ) );
-    PC_momentumInc_phi->push_back( thisRecMomentumInc.Phi() );
-    PC_momentumInc_theta->push_back( thisRecMomentumInc.Theta() );
+	//refitted pair is p4 from vertex.h, uses electron mass and weight cut of 0.5 weight is contribution to the vertex fit 
+	 const math::XYZTLorentzVectorF thisRecMomentumOut =  conversionsHandle->at(i).refittedPair4Momentum();
+    
+
+   // PC_momentumInc_pt->push_back( sqrt( thisRecMomentumInc.Perp2() ) );
+   // PC_momentumInc_phi->push_back( thisRecMomentumInc.Phi() );
+   // PC_momentumInc_theta->push_back( thisRecMomentumInc.Theta() );
+
     PC_momentumOut_pt->push_back( sqrt( thisRecMomentumOut.Perp2() ) );
     PC_momentumOut_phi->push_back( thisRecMomentumOut.Phi() );
     PC_momentumOut_theta->push_back( thisRecMomentumOut.Theta() );
     PC_momentumOut_mass->push_back( thisRecMomentumOut.mass() );
-    PC_momentumOut_numberOfTracks->push_back( thisDisplacedVtx.nSecondaryTracks() );
+    PC_momentumOut_numberOfTracks->push_back( conversionsHandle->at(i).nTracks() );
 
-    PC_isNuclear->push_back( thisDisplacedVtx.isNucl() ); 
-    PC_isNuclearLoose->push_back( thisDisplacedVtx.isNucl_Loose() );
-    PC_isNuclearKink->push_back( thisDisplacedVtx.isNucl_Kink() );
-    PC_isK0->push_back( thisDisplacedVtx.isK0() );
-    PC_isLambda->push_back( thisDisplacedVtx.isLambda() );
-    PC_isLambdaBar->push_back( thisDisplacedVtx.isLambdaBar() );
-    PC_isKPlusLoose->push_back( thisDisplacedVtx.isKplus_Loose() );
-    PC_isKMinusLoose->push_back( thisDisplacedVtx.isKminus_Loose() );
-    PC_isConversionLoose->push_back( thisDisplacedVtx.isConv_Loose() );
-    PC_isLooper->push_back( thisDisplacedVtx.isLooper() );
+  //  PC_isNuclear->push_back( thisDisplacedVtx.isNucl() ); 
+  //  PC_isNuclearLoose->push_back( thisDisplacedVtx.isNucl_Loose() );
+  //  PC_isNuclearKink->push_back( thisDisplacedVtx.isNucl_Kink() );
+  //  PC_isK0->push_back( thisDisplacedVtx.isK0() );
+  //  PC_isLambda->push_back( thisDisplacedVtx.isLambda() );
+  //  PC_isLambdaBar->push_back( thisDisplacedVtx.isLambdaBar() );
+  //  PC_isKPlusLoose->push_back( thisDisplacedVtx.isKplus_Loose() );
+  //  PC_isKMinusLoose->push_back( thisDisplacedVtx.isKminus_Loose() );
+  //  PC_isConversionLoose->push_back( thisDisplacedVtx.isConv_Loose() );
+  //  PC_isLooper->push_back( thisDisplacedVtx.isLooper() );
     PC_isFake->push_back( thisDisplacedVtx.isFake() );
-    PC_isTherePrimaryTrack->push_back( thisDisplacedVtx.isTherePrimaryTracks() );
-    PC_isThereMergedTrack->push_back( thisDisplacedVtx.isThereMergedTracks() );
+  //  PC_isTherePrimaryTrack->push_back( thisDisplacedVtx.isTherePrimaryTracks() );
+  //  PC_isThereMergedTrack->push_back( thisDisplacedVtx.isThereMergedTracks() );
 
-    if(PC_isNuclear)NumberOfNuclearVertex++;
-    if(PC_isNuclearLoose)NumberOfLooseNuclearVertex++;
+   // if(PC_isNuclear)NumberOfNuclearVertex++;
+   // if(PC_isNuclearLoose)NumberOfLooseNuclearVertex++;
   
     /// Find association with Tracking Vertices
     double deltaR  = 999;
@@ -984,7 +998,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     unsigned int nTrackingParticles_PC_Out0p2 = 0;
     unsigned int nTrackingParticles_PC_Out0p5 = 0;
     unsigned int nTrackingParticles_PC_Out1p0 = 0;
-    double Source_Charge = -10.;
+    double Source_Charge =0;
 
     reco::Vertex::trackRef_iterator trackDisplacedVertex;
     for ( trackDisplacedVertex = thisDisplacedVtx.tracks_begin();
@@ -995,34 +1009,34 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 
         int QualityTrack = 0;
         bool Flag_SecondaryTrack = false;
-        if( thisDisplacedVtx.isPrimaryTrack((*trackDisplacedVertex))) QualityTrack = 1; 
-        if( thisDisplacedVtx.isMergedTrack((*trackDisplacedVertex))) QualityTrack = 1; 
-        if( thisDisplacedVtx.isSecondaryTrack((*trackDisplacedVertex))){
-            QualityTrack = 1;
-            Flag_SecondaryTrack = true;
-        } 
-        if( QualityTrack == 0) std::cout << "Error: Track is not Primary, not Merged, not Secondary, it is rejected, see code" << std::endl;
-        if( QualityTrack == 0) continue; //reject unknow type of tracks
+     //   if( thisDisplacedVtx.isPrimaryTrack((*trackDisplacedVertex))) QualityTrack = 1; 
+     //   if( thisDisplacedVtx.isMergedTrack((*trackDisplacedVertex))) QualityTrack = 1; 
+     //   if( thisDisplacedVtx.isSecondaryTrack((*trackDisplacedVertex))){
+     //       QualityTrack = 1;
+     //       Flag_SecondaryTrack = true;
+     //   } 
+     //   if( QualityTrack == 0) std::cout << "Error: Track is not Primary, not Merged, not Secondary, it is rejected, see code" << std::endl;
+     //   if( QualityTrack == 0) continue; //reject unknow type of tracks
 
-        if(thisDisplacedVtx.isPrimaryTrack((*trackDisplacedVertex)) || thisDisplacedVtx.isMergedTrack((*trackDisplacedVertex))) 
-          Source_Charge = (*trackDisplacedVertex)->charge();
+       // if(thisDisplacedVtx.isPrimaryTrack((*trackDisplacedVertex)) || thisDisplacedVtx.isMergedTrack((*trackDisplacedVertex))) 
+          Source_Charge += (*trackDisplacedVertex)->charge();
       //  if ( (*trackDisplacedVertex)->charge() == 0 ) //reject nuetral particles
       //  continue;
 
    //     if( fabs((*trackDisplacedVertex)->charge()) > 2.5) continue;// reject particle out of detector acceptence  //BUG?? 
-
+//TODO continue from here!!!!!!!11 
         nTrackingParticles_PC_0p0++;
-        if(Flag_SecondaryTrack) nTrackingParticles_PC_Out0p0++;
+   //     if(Flag_SecondaryTrack) nTrackingParticles_PC_Out0p0++;
 
-        if( (*trackDisplacedVertex)->pt() > 0.2 ) nTrackingParticles_PC_0p2++;
-        if( (*trackDisplacedVertex)->pt() > 0.5 ) nTrackingParticles_PC_0p5++;
-        if( (*trackDisplacedVertex)->pt() > 1.0 ) nTrackingParticles_PC_1p0++;
+   //     if( (*trackDisplacedVertex)->pt() > 0.2 ) nTrackingParticles_PC_0p2++;
+    //    if( (*trackDisplacedVertex)->pt() > 0.5 ) nTrackingParticles_PC_0p5++;
+    //    if( (*trackDisplacedVertex)->pt() > 1.0 ) nTrackingParticles_PC_1p0++;
  
-        if(Flag_SecondaryTrack) {
-           if( (*trackDisplacedVertex)->pt() > 0.2 ) nTrackingParticles_PC_Out0p2++;
-           if( (*trackDisplacedVertex)->pt() > 0.5 ) nTrackingParticles_PC_Out0p5++;
-           if( (*trackDisplacedVertex)->pt() > 1.0 ) nTrackingParticles_PC_Out1p0++;
-        }
+    //    if(Flag_SecondaryTrack) {
+    //       if( (*trackDisplacedVertex)->pt() > 0.2 ) nTrackingParticles_PC_Out0p2++;
+    //       if( (*trackDisplacedVertex)->pt() > 0.5 ) nTrackingParticles_PC_Out0p5++;
+    //       if( (*trackDisplacedVertex)->pt() > 1.0 ) nTrackingParticles_PC_Out1p0++;
+     //   }
       /// New Track!
       vTrack_pt.push_back( (*trackDisplacedVertex)->pt() );
       vTrack_algo.push_back( (*trackDisplacedVertex)->algo() );
@@ -1084,9 +1098,9 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     PC_numberOfTracks_Out0p5->push_back( nTrackingParticles_PC_Out0p5 );
     PC_numberOfTracks_Out1p0->push_back( nTrackingParticles_PC_Out1p0 );
 */
-    PC_Inc_charge->push_back( Source_Charge );
+    //PC_Inc_charge->push_back( Source_Charge );
 
-    PC_vTrack_algo->push_back( vTrack_algo );
+  //  PC_vTrack_algo->push_back( vTrack_algo );
     PC_vTrack_pt->push_back( vTrack_pt );
     PC_vTrack_eta->push_back( vTrack_eta );
     PC_vTrack_phi->push_back( vTrack_phi );
