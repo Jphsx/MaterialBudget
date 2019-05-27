@@ -62,7 +62,7 @@ process.AODoutput = cms.OutputModule("PoolOutputModule",
 
 
 ### Define number of events to be processed (-1 means all)
-#process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100) )
+#process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(1001) )
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
 
 #process.source.duplicateCheckMode = cms.untracked.string("noDuplicateCheck")
@@ -82,7 +82,7 @@ process.MyNtupleMaking = cms.EDAnalyzer("NtupleMakerPhotonConversions",
 
 #### Root output
 process.TFileService = cms.Service("TFileService",
-  fileName = cms.string('Run2018_iteractive_PC.root' )
+  fileName = cms.string("Run2018_iteractive_MCPC.root" )
 )
 
 #process.out = cms.OutputModule("PoolOutputModule",
