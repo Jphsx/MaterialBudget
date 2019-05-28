@@ -258,7 +258,7 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "MC_TrkV_associationPC_deltaR3dPerpendicular", "std::vector< double >", &MC_TrkV_associationPC_deltaR3dPerpendicular );
   outputTree->Branch( "MC_TrkV_associationPC_deltaR3dParallel", "std::vector< double >", &MC_TrkV_associationPC_deltaR3dParallel );
 
-
+/*
   outputTree->Branch( "MC_TrkV_associationDeltaPt", "std::vector< double >", &MC_TrkV_associationDeltaPt );
   outputTree->Branch( "MC_TrkV_associationDeltaPhi", "std::vector< double >", &MC_TrkV_associationDeltaPhi );
   outputTree->Branch( "MC_TrkV_associationDeltaTheta", "std::vector< double >", &MC_TrkV_associationDeltaTheta );
@@ -278,7 +278,7 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "MC_TrkV_associationIsFake", "std::vector< bool >", &MC_TrkV_associationIsFake );
   outputTree->Branch( "MC_TrkV_associationIsTherePrimaryTrack", "std::vector< bool >", &MC_TrkV_associationIsTherePrimaryTrack );
   outputTree->Branch( "MC_TrkV_associationIsThereMergedTrack", "std::vector< bool >", &MC_TrkV_associationIsThereMergedTrack );
-
+*/
 
   /// Branches for Displaced Vertices
   outputTree->Branch( "numberOfPC", &numberOfPC, "numberOfPC/i" );
@@ -648,7 +648,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
         jAssociationCounter++;
 
         /// Calculate all possible forms of distance
-        const math::XYZTLorentzVector thisRecMomentumInc = thisDisplacedVtx.primaryMomentum("PI", false, 0.0);
+       // const math::XYZTLorentzVector thisRecMomentumInc = thisDisplacedVtx.primaryMomentum("PI", false, 0.0);
+        const math::XYZTLorentzVectorF thisRecMomentumInc =  conversionsHandle->at(i).refittedPair4Momentum();
 
         deltaPt = sqrt(thisSimMomentumInc.Perp2()) - sqrt(thisRecMomentumInc.Perp2());
         //deltaPhi = thisSimMomentumInc.Phi() - thisRecMomentumInc.Phi();
