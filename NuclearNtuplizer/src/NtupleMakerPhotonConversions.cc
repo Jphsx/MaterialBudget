@@ -538,7 +538,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       unsigned int nTrackingParticles_Out0p5 = 0;
       unsigned int nTrackingParticles_Out1p0 = 0;
       TrackingParticleRefVector::iterator trackDaughter;
-	std::cout<<"daughter loop"<< std::endl;
+//	std::cout<<"daughter loop"<< std::endl;
       for ( trackDaughter = thisVtx.daughterTracks_begin();
             trackDaughter != thisVtx.daughterTracks_end();
             ++trackDaughter )
@@ -584,7 +584,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       double Source_Charge = -10;
       int Source_pdgId = 0;
      
-		std::cout<<"source loop"<< std::endl;
+	//	std::cout<<"source loop"<< std::endl;
       TrackingParticleRefVector::iterator trackSource;
       for ( trackSource = thisVtx.sourceTracks_begin();
             trackSource != thisVtx.sourceTracks_end();
@@ -639,7 +639,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       /// Match with Particle Flow Displaced Vertices
 		///////START UPDATING HERE------------ change PFDisp to Conversions//////////////////////////////
       //for ( unsigned int j = 0; j < displacedVtxHandle->size(); j++ )
-		std::cout<<"conv loop"<< std::endl;
+	//	std::cout<<"conv loop"<< std::endl;
 		for (unsigned int j = 0; j < conversionsHandle->size(); j++ )
       {
        // reco::PFDisplacedVertex thisDisplacedVtx = displacedVtxHandle->at(j);
@@ -657,7 +657,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 
         /// Calculate all possible forms of distance
        // const math::XYZTLorentzVector thisRecMomentumInc = thisDisplacedVtx.primaryMomentum("PI", false, 0.0);
-        const math::XYZTLorentzVectorF thisRecMomentumInc =  conversionsHandle->at(i).refittedPair4Momentum();
+        const math::XYZTLorentzVectorF thisRecMomentumInc =  conversionsHandle->at(j).refittedPair4Momentum();
 
         deltaPt = sqrt(thisSimMomentumInc.Perp2()) - sqrt(thisRecMomentumInc.Perp2());
         //deltaPhi = thisSimMomentumInc.Phi() - thisRecMomentumInc.Phi();
