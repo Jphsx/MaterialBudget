@@ -400,7 +400,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   /// Prepare PileUp
   MC_PUInfo_bunchCrossing->clear();
   MC_PUInfo_numberOfInteractions->clear();
-  if ( !isRe  )
+  if ( !isRealData  )
   {
     /// Get PileUp
     edm::Handle< std::vector< PileupSummaryInfo > > pileUpInfoHandle;
