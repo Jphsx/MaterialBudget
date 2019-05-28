@@ -52,7 +52,8 @@ process.source = cms.Source("PoolSource",
 process.options = cms.untracked.PSet(
 
 )
-
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(-1) )
+process.source.duplicateCheckMode = cms.untracked.string("noDuplicateCheck")
 # Output definition
 
 process.AODoutput = cms.OutputModule("PoolOutputModule",
@@ -84,7 +85,7 @@ process.MessageLogger.cerr.FwkReport.reportEvery = 1000
 ### Define Ntuplizer
 #process.MyNtupleMaking = cms.EDAnalyzer("NtupleMakerNuclearInteractions",
 process.MyNtupleMaking = cms.EDAnalyzer("NtupleMakerPhotonConversions",
-#   RealData  = cms.bool(False),
+   RealData  = cms.bool(False),
 )
 
 #### Root output
