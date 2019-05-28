@@ -21,8 +21,12 @@ process.load('DQMOffline.Configuration.DQMOffline_cff')
 ### Import real conditions
 from Configuration.StandardSequences.FrontierConditions_GlobalTag_cff import *
 process.load('Configuration/StandardSequences/FrontierConditions_GlobalTag_cff')
-from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, '102X_dataRun2_Prompt_v6', '')
+
+#from Configuration.AlCa.GlobalTag import GlobalTag
+#process.GlobalTag = GlobalTag(process.GlobalTag, '102X_dataRun2_Prompt_v6', '')
+
+from Configuration.AlCa.GlobalTag_condDBv2 import GlobalTag
+process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:phase1_2018_realistic', '')
 
 #### Additional stuff
 ##process.load("RecoTracker.TrackProducer.TrackRefitters_cff")
