@@ -228,8 +228,8 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "BS_xWidth", &BS_xWidth, "BS_xWidth/D" );
   outputTree->Branch( "BS_yWidth", &BS_yWidth, "BS_yWidth/D" );
 
-  /// Branches for Tracking Vertices
-/*  outputTree->Branch( "numberOfMC_TrkV", &numberOfMC_TrkV, "numberOfMC_TrkV/i" );
+  /// Branches for Tracking Vertices  //TESTING THESE BRANCHES
+  outputTree->Branch( "numberOfMC_TrkV", &numberOfMC_TrkV, "numberOfMC_TrkV/i" );
   outputTree->Branch( "MC_TrkV_isNuclearInteraction", "std::vector< bool >", &MC_TrkV_isNuclearInteraction );
   outputTree->Branch( "MC_TrkV_isKaonDecay", "std::vector< bool >", &MC_TrkV_isKaonDecay );
   outputTree->Branch( "MC_TrkV_isConversion", "std::vector< bool >", &MC_TrkV_isConversion );
@@ -257,8 +257,8 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "MC_TrkV_associationPC_deltaR3d", "std::vector< double >", &MC_TrkV_associationPC_deltaR3d );
   outputTree->Branch( "MC_TrkV_associationPC_deltaR3dPerpendicular", "std::vector< double >", &MC_TrkV_associationPC_deltaR3dPerpendicular );
   outputTree->Branch( "MC_TrkV_associationPC_deltaR3dParallel", "std::vector< double >", &MC_TrkV_associationPC_deltaR3dParallel );
-*/
-/*
+
+
   outputTree->Branch( "MC_TrkV_associationDeltaPt", "std::vector< double >", &MC_TrkV_associationDeltaPt );
   outputTree->Branch( "MC_TrkV_associationDeltaPhi", "std::vector< double >", &MC_TrkV_associationDeltaPhi );
   outputTree->Branch( "MC_TrkV_associationDeltaTheta", "std::vector< double >", &MC_TrkV_associationDeltaTheta );
@@ -278,7 +278,7 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "MC_TrkV_associationIsFake", "std::vector< bool >", &MC_TrkV_associationIsFake );
   outputTree->Branch( "MC_TrkV_associationIsTherePrimaryTrack", "std::vector< bool >", &MC_TrkV_associationIsTherePrimaryTrack );
   outputTree->Branch( "MC_TrkV_associationIsThereMergedTrack", "std::vector< bool >", &MC_TrkV_associationIsThereMergedTrack );
-*/
+
 
   /// Branches for Displaced Vertices
   outputTree->Branch( "numberOfPC", &numberOfPC, "numberOfPC/i" );
@@ -400,7 +400,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   /// Prepare PileUp
   MC_PUInfo_bunchCrossing->clear();
   MC_PUInfo_numberOfInteractions->clear();
-  if ( !isRealData )
+  if ( !isRe  )
   {
     /// Get PileUp
     edm::Handle< std::vector< PileupSummaryInfo > > pileUpInfoHandle;
@@ -631,17 +631,19 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       unsigned int jAssociationCounterLast = 0;
 
       /// Match with Particle Flow Displaced Vertices
+		///////START UPDATING HERE------------ change PFDisp to Conversions//////////////////////////////
       for ( unsigned int j = 0; j < displacedVtxHandle->size(); j++ )
       {
-        reco::PFDisplacedVertex thisDisplacedVtx = displacedVtxHandle->at(j);
+       // reco::PFDisplacedVertex thisDisplacedVtx = displacedVtxHandle->at(j);
+			reco::Vertex thisDisplacedVtx = conversionsHandle->at(i).conversionVertex();
 
         if ( thisDisplacedVtx.isFake() )
           continue;
 
         // make assosication only with Nuclear Interection reco vertices
         //if ( !(thisDisplacedVtx.isNucl()) )
-		if(!(thisDisplacedVtx.isConv()) )
-          continue;
+		//if(!(thisDisplacedVtx.isConv()) )
+         // continue;
 
         jAssociationCounter++;
 
@@ -758,6 +760,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     }
   }
 
+	/////////////END MC STUFF////////////////////////////////////////////////////////////////////////////
   /// From now on, everything is purely reco
 
   /// Prepare PF Displaced Vertices
