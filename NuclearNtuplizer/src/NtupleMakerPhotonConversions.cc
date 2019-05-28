@@ -603,7 +603,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
         if( (*trackSource)->pt() > 1.0 && R_SimVer > 12.) nTrackingParticles_1p0++;
       }//end track source loop
 
-      if( NumberOfPrimaryTracks != 1 ) std::cout << " ERROR! CHECK: unusual size for MC of sorce Tracks = " << NumberOfPrimaryTracks << std::endl;
+     // if( NumberOfPrimaryTracks != 1 ) std::cout << " ERROR! CHECK: unusual size for MC of sorce Tracks = " << NumberOfPrimaryTracks << std::endl;
  
       MC_TrkV_numberOfChargedParticles_0p2->push_back( nTrackingParticles_0p2 );
       MC_TrkV_numberOfChargedParticles_0p5->push_back( nTrackingParticles_0p5 );
@@ -1146,7 +1146,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   }
 
 //if (NumberOfLooseNuclearVertex > 0) std:cout << "NumberOfLooseNuclearVertex = " << NumberOfLooseNuclearVertex << " NumberOfNuclearVertex = " << NumberOfNuclearVertex << std::endl;
-if (FlagLess3TracksFromVertex) std::cout << "NumberOfLooseNuclearVertex = " << NumberOfLooseNuclearVertex << " NumberOfNuclearVertex = " << NumberOfNuclearVertex << std::endl;
+//if (FlagLess3TracksFromVertex) std::cout << "NumberOfLooseNuclearVertex = " << NumberOfLooseNuclearVertex << " NumberOfNuclearVertex = " << NumberOfNuclearVertex << std::endl;
 
   /// Fill Output Tree for MC all the time, for Data if we have RECO NI vertex
  if( (!isRealData) || (isRealData && numberOfPC > 0) )  outputTree->Fill();
