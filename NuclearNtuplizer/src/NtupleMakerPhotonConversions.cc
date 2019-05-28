@@ -526,8 +526,10 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       MC_TrkV_isConversion->push_back( isThisConversion );
 
       /// Inbound and outbound momenta
-      math::XYZVectorD thisSimMomentumInc = (*thisVtx.sourceTracks_begin())->momentum();
+     // math::XYZVectorD thisSimMomentumInc = (*thisVtx.sourceTracks_begin())->momentum();
+	 // math::XYZVectorD thisSimMomentumInc = (*thisVtx.daughterTracks_begin())->momentum();
       math::XYZTLorentzVectorD thisSimMomentumOut( 0, 0, 0, 0 );
+	  math::XYZTLorentzVectorD thisSimMomentumInc = thisSimMomentumOut;
 
       unsigned int nTrackingParticles_0p2 = 0;
       unsigned int nTrackingParticles_0p5 = 0;
@@ -540,8 +542,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
             trackDaughter != thisVtx.daughterTracks_end();
             ++trackDaughter )
       {
-        if ( (*trackDaughter)->charge() == 0 ) //reject neutral particles
-        continue;
+       // if ( (*trackDaughter)->charge() == 0 ) //reject neutral particles
+       // continue;
 
         if ( fabs((*trackDaughter)->eta()) > 2.5 ) //reject particle out of detector acceptence in eta
         continue;
@@ -560,7 +562,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
         nTrackingParticles_Out1p0++;
         }
       }
-
+		
+      thisSimMomentumInc = thisSimMomentumOut;
       MC_TrkV_x->push_back( thisVtx.position().x() );
       MC_TrkV_y->push_back( thisVtx.position().y() );
       MC_TrkV_z->push_back( thisVtx.position().z() );
@@ -579,7 +582,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       int NumberOfPrimaryTracks = 0;
       double Source_Charge = -10;
       int Source_pdgId = 0;
-   
+     
       TrackingParticleRefVector::iterator trackSource;
       for ( trackSource = thisVtx.sourceTracks_begin();
             trackSource != thisVtx.sourceTracks_end();
@@ -590,13 +593,14 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
         Source_Charge = (*trackSource)->charge();
         Source_pdgId = (*trackSource)->pdgId();
 
-        if ( (*trackSource)->charge() == 0 )
-        continue;
+       // if ( (*trackSource)->charge() == 0 )
+       // continue;
         // request  R_SimVer > 12. to have possibity to reconstruct charged tracker at least at Pixel region
         if( (*trackSource)->pt() > 0.2 && R_SimVer > 12. ) nTrackingParticles_0p2++;
         if( (*trackSource)->pt() > 0.5 && R_SimVer > 12.) nTrackingParticles_0p5++;
         if( (*trackSource)->pt() > 1.0 && R_SimVer > 12.) nTrackingParticles_1p0++;
-      }
+      }//end track source loop
+
       if( NumberOfPrimaryTracks != 1 ) std::cout << " ERROR! CHECK: unusual size for MC of sorce Tracks = " << NumberOfPrimaryTracks << std::endl;
  
       MC_TrkV_numberOfChargedParticles_0p2->push_back( nTrackingParticles_0p2 );
