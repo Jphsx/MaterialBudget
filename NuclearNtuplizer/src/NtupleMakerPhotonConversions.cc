@@ -517,8 +517,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       // select only Nuclear Interection vertex candicate
       //if ( !isThisNuclearInteraction && !isThisKaonDecay && !isThisConversion )
     //  if ( !isThisNuclearInteraction )
-	if(!isThisConversion)
-        continue;
+	//if(!isThisConversion)
+     //   continue;
 
       numberOfMC_TrkV++;
       MC_TrkV_isNuclearInteraction->push_back( isThisNuclearInteraction );
@@ -538,6 +538,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       unsigned int nTrackingParticles_Out0p5 = 0;
       unsigned int nTrackingParticles_Out1p0 = 0;
       TrackingParticleRefVector::iterator trackDaughter;
+	//std::cout<<"daughter loop"<< std::endl;
       for ( trackDaughter = thisVtx.daughterTracks_begin();
             trackDaughter != thisVtx.daughterTracks_end();
             ++trackDaughter )
@@ -583,6 +584,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       double Source_Charge = -10;
       int Source_pdgId = 0;
      
+		//std::cout<<"source loop"<< std::endl;
       TrackingParticleRefVector::iterator trackSource;
       for ( trackSource = thisVtx.sourceTracks_begin();
             trackSource != thisVtx.sourceTracks_end();
@@ -636,10 +638,11 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 
       /// Match with Particle Flow Displaced Vertices
 		///////START UPDATING HERE------------ change PFDisp to Conversions//////////////////////////////
-      for ( unsigned int j = 0; j < displacedVtxHandle->size(); j++ )
+      //for ( unsigned int j = 0; j < displacedVtxHandle->size(); j++ )
+		for (unsigned int j = 0; j < conversionsHandle->size(); j++ )
       {
        // reco::PFDisplacedVertex thisDisplacedVtx = displacedVtxHandle->at(j);
-			reco::Vertex thisDisplacedVtx = conversionsHandle->at(i).conversionVertex();
+			reco::Vertex thisDisplacedVtx = conversionsHandle->at(j).conversionVertex();
 
         if ( thisDisplacedVtx.isFake() )
           continue;
