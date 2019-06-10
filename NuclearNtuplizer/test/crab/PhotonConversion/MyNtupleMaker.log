@@ -1,0 +1,687 @@
+%MSG-i SiPixelQualityESProducer::SiPixelQualityESProducer:  (NoModuleName)  29-May-2019 18:34:42 CEST pre-events
+
+%MSG
+%MSG-i SiStripBackPlaneCorrectionDepESProducer:  (NoModuleName)  29-May-2019 18:34:43 CEST pre-events
+ctor
+%MSG
+%MSG-i SiStripLorentzAngleDepESProducer:  (NoModuleName)  29-May-2019 18:34:43 CEST pre-events
+ctor
+%MSG
+%MSG-i SiStripQualityESProducer:  (NoModuleName) 29-May-2019 18:34:43 CEST  pre-events
+ctor
+%MSG
+%MSG-i HCAL:  (NoModuleName) 29-May-2019 18:34:43 CEST pre-events
+HcalHardcodeCalibrations::HcalHardcodeCalibrations->...
+%MSG
+29-May-2019 18:35:09 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_0.root
+29-May-2019 18:35:13 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_0.root
+%MSG-i EventSetupDependency:  AfterSource 29-May-2019 18:35:28 CEST BeforeEvents
+The EventSetup record HcalDbRecord depends on at least one Record 
+ (HcalRecNumberingRecord) which is not present in the job.
+ This may lead to an exception begin thrown during event processing.
+ If no exception occurs during the job than it is usually safe to ignore this message.
+%MSG
+%MSG-i CondDBESSource:  AfterSource 29-May-2019 18:35:28 CEST BeforeEvents
+Getting data for record "DTMtimeRcd" to be consumed by run: 1 lumi: 0 event: 0, timestamp: 1; from CondDBESSource::setIntervalFor
+%MSG
+%MSG-i HCAL:  AfterSource 29-May-2019 18:35:29 CEST BeforeEvents
+HcalHardcodeCalibrations::setIntervalFor-> key: HcalGainWidthsRcd time: run: 1 lumi: 0 event: 0/1
+%MSG
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:35:58.573 CEST
+29-May-2019 18:36:24 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_0.root
+29-May-2019 18:36:24 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_1.root
+29-May-2019 18:36:24 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_1.root
+%MSG-w RunLumiMerging:  source 29-May-2019 18:36:33 CEST PostProcessEvent
+ProductResolver::mergeTheProduct
+Run/lumi product has neither a mergeProduct nor isProductEqual function
+Using the first, ignoring the second in merge
+className = GenLumiInfoHeader
+moduleLabel = generator
+instance = 
+process = SIM
+
+%MSG
+%MSG-e RunLumiMerging:  source 29-May-2019 18:36:33 CEST PostProcessEvent
+ProductResolver::mergeTheProduct
+Two run/lumi products for the same run/lumi which should be equal are not
+Using the first, ignoring the second
+className = edm::RandomEngineStates
+moduleLabel = randomEngineStateProducer
+instance = beginLumi
+process = SIM
+
+%MSG
+29-May-2019 18:37:05 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_1.root
+29-May-2019 18:37:05 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_10.root
+29-May-2019 18:37:05 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_10.root
+Begin processing the 10001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:37:15.651 CEST
+29-May-2019 18:37:36 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_10.root
+29-May-2019 18:37:36 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_100.root
+29-May-2019 18:37:36 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_100.root
+29-May-2019 18:38:08 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_100.root
+29-May-2019 18:38:08 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_102.root
+29-May-2019 18:38:08 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_102.root
+Begin processing the 20001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:38:17.455 CEST
+29-May-2019 18:38:37 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_102.root
+29-May-2019 18:38:37 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_103.root
+29-May-2019 18:38:38 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_103.root
+29-May-2019 18:39:13 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_103.root
+29-May-2019 18:39:13 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_104.root
+29-May-2019 18:39:14 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_104.root
+Begin processing the 30001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:39:26.984 CEST
+29-May-2019 18:39:53 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_104.root
+29-May-2019 18:39:53 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_105.root
+29-May-2019 18:39:53 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_105.root
+29-May-2019 18:40:45 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_105.root
+29-May-2019 18:40:45 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_106.root
+29-May-2019 18:40:45 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_106.root
+Begin processing the 40001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:40:57.918 CEST
+29-May-2019 18:41:25 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_106.root
+29-May-2019 18:41:25 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_107.root
+29-May-2019 18:41:25 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_107.root
+29-May-2019 18:42:07 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_107.root
+29-May-2019 18:42:07 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_108.root
+29-May-2019 18:42:08 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_108.root
+Begin processing the 50001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:42:19.350 CEST
+29-May-2019 18:42:42 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_108.root
+29-May-2019 18:42:42 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_109.root
+29-May-2019 18:42:42 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_109.root
+29-May-2019 18:43:14 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_109.root
+29-May-2019 18:43:14 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_11.root
+29-May-2019 18:43:15 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_11.root
+Begin processing the 60001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:43:26.697 CEST
+29-May-2019 18:43:51 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_11.root
+29-May-2019 18:43:51 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_110.root
+29-May-2019 18:43:51 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_110.root
+29-May-2019 18:44:33 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_110.root
+29-May-2019 18:44:33 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_111.root
+29-May-2019 18:44:33 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_111.root
+Begin processing the 70001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:44:43.941 CEST
+29-May-2019 18:45:13 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_111.root
+29-May-2019 18:45:13 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_112.root
+29-May-2019 18:45:13 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_112.root
+29-May-2019 18:45:50 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_112.root
+29-May-2019 18:45:50 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_114.root
+29-May-2019 18:45:50 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_114.root
+Begin processing the 80001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:46:00.798 CEST
+29-May-2019 18:46:37 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_114.root
+29-May-2019 18:46:37 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_115.root
+29-May-2019 18:46:37 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_115.root
+29-May-2019 18:47:13 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_115.root
+29-May-2019 18:47:13 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_116.root
+29-May-2019 18:47:13 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_116.root
+Begin processing the 90001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:47:24.285 CEST
+29-May-2019 18:47:45 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_116.root
+29-May-2019 18:47:45 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_117.root
+29-May-2019 18:47:45 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_117.root
+29-May-2019 18:48:22 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_117.root
+29-May-2019 18:48:22 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_118.root
+29-May-2019 18:48:22 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_118.root
+Begin processing the 100001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:48:33.795 CEST
+29-May-2019 18:48:57 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_118.root
+29-May-2019 18:48:57 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_119.root
+29-May-2019 18:48:58 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_119.root
+29-May-2019 18:49:33 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_119.root
+29-May-2019 18:49:33 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_12.root
+29-May-2019 18:49:34 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_12.root
+Begin processing the 110001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:49:45.179 CEST
+29-May-2019 18:50:12 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_12.root
+29-May-2019 18:50:12 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_120.root
+29-May-2019 18:50:13 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_120.root
+29-May-2019 18:50:52 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_120.root
+29-May-2019 18:50:52 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_121.root
+29-May-2019 18:50:52 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_121.root
+Begin processing the 120001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:51:08.031 CEST
+29-May-2019 18:51:40 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_121.root
+29-May-2019 18:51:40 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_122.root
+29-May-2019 18:51:40 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_122.root
+29-May-2019 18:52:43 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_122.root
+29-May-2019 18:52:43 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_123.root
+29-May-2019 18:52:44 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_123.root
+Begin processing the 130001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:52:54.206 CEST
+29-May-2019 18:53:17 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_123.root
+29-May-2019 18:53:17 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_124.root
+29-May-2019 18:53:17 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_124.root
+29-May-2019 18:53:49 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_124.root
+29-May-2019 18:53:49 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_125.root
+29-May-2019 18:53:49 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_125.root
+Begin processing the 140001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:54:00.703 CEST
+29-May-2019 18:54:21 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_125.root
+29-May-2019 18:54:21 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_126.root
+29-May-2019 18:54:22 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_126.root
+29-May-2019 18:54:56 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_126.root
+29-May-2019 18:54:56 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_127.root
+29-May-2019 18:54:56 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_127.root
+Begin processing the 150001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:55:06.690 CEST
+29-May-2019 18:55:33 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_127.root
+29-May-2019 18:55:33 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_128.root
+29-May-2019 18:55:34 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_128.root
+29-May-2019 18:56:09 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_128.root
+29-May-2019 18:56:09 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_129.root
+29-May-2019 18:56:10 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_129.root
+Begin processing the 160001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:56:23.084 CEST
+29-May-2019 18:56:51 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_129.root
+29-May-2019 18:56:51 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_13.root
+29-May-2019 18:56:51 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_13.root
+29-May-2019 18:57:30 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_13.root
+29-May-2019 18:57:30 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_130.root
+29-May-2019 18:57:30 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_130.root
+Begin processing the 170001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:57:42.407 CEST
+29-May-2019 18:58:03 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_130.root
+29-May-2019 18:58:03 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_131.root
+29-May-2019 18:58:04 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_131.root
+29-May-2019 18:58:37 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_131.root
+29-May-2019 18:58:37 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_132.root
+29-May-2019 18:58:38 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_132.root
+Begin processing the 180001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:58:48.904 CEST
+29-May-2019 18:59:11 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_132.root
+29-May-2019 18:59:11 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_133.root
+29-May-2019 18:59:11 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_133.root
+29-May-2019 18:59:46 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_133.root
+29-May-2019 18:59:46 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_134.root
+29-May-2019 18:59:46 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_134.root
+Begin processing the 190001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 18:59:58.581 CEST
+29-May-2019 19:00:26 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_134.root
+29-May-2019 19:00:26 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_135.root
+29-May-2019 19:00:27 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_135.root
+29-May-2019 19:01:29 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_135.root
+29-May-2019 19:01:29 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_136.root
+29-May-2019 19:01:29 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_136.root
+Begin processing the 200001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:01:39.388 CEST
+29-May-2019 19:02:07 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_136.root
+29-May-2019 19:02:07 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_137.root
+29-May-2019 19:02:08 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_137.root
+29-May-2019 19:02:40 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_137.root
+29-May-2019 19:02:40 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_139.root
+29-May-2019 19:02:40 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_139.root
+Begin processing the 210001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:02:50.912 CEST
+29-May-2019 19:03:14 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_139.root
+29-May-2019 19:03:14 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_14.root
+29-May-2019 19:03:14 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_14.root
+29-May-2019 19:03:59 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_14.root
+29-May-2019 19:03:59 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_140.root
+29-May-2019 19:03:59 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_140.root
+Begin processing the 220001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:04:08.881 CEST
+29-May-2019 19:04:30 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_140.root
+29-May-2019 19:04:30 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_141.root
+29-May-2019 19:04:30 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_141.root
+29-May-2019 19:05:00 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_141.root
+29-May-2019 19:05:00 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_142.root
+29-May-2019 19:05:00 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_142.root
+Begin processing the 230001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:05:13.175 CEST
+29-May-2019 19:05:41 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_142.root
+29-May-2019 19:05:41 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_143.root
+29-May-2019 19:05:41 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_143.root
+29-May-2019 19:06:14 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_143.root
+29-May-2019 19:06:14 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_145.root
+29-May-2019 19:06:14 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_145.root
+Begin processing the 240001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:06:23.086 CEST
+29-May-2019 19:06:46 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_145.root
+29-May-2019 19:06:46 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_146.root
+29-May-2019 19:06:46 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_146.root
+29-May-2019 19:07:17 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_146.root
+29-May-2019 19:07:17 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_147.root
+29-May-2019 19:07:18 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_147.root
+Begin processing the 250001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:07:27.572 CEST
+29-May-2019 19:07:48 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_147.root
+29-May-2019 19:07:48 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_148.root
+29-May-2019 19:07:48 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_148.root
+29-May-2019 19:08:23 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_148.root
+29-May-2019 19:08:23 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_149.root
+29-May-2019 19:08:24 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_149.root
+Begin processing the 260001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:08:34.684 CEST
+29-May-2019 19:09:08 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_149.root
+29-May-2019 19:09:08 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_15.root
+29-May-2019 19:09:09 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_15.root
+29-May-2019 19:09:43 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_15.root
+29-May-2019 19:09:43 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_150.root
+29-May-2019 19:09:43 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_150.root
+Begin processing the 270001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:09:52.603 CEST
+29-May-2019 19:10:15 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_150.root
+29-May-2019 19:10:15 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_151.root
+29-May-2019 19:10:16 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_151.root
+29-May-2019 19:10:59 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_151.root
+29-May-2019 19:10:59 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_152.root
+29-May-2019 19:11:00 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_152.root
+Begin processing the 280001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:11:09.263 CEST
+29-May-2019 19:11:35 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_152.root
+29-May-2019 19:11:35 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_153.root
+29-May-2019 19:11:35 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_153.root
+29-May-2019 19:12:07 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_153.root
+29-May-2019 19:12:07 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_154.root
+29-May-2019 19:12:07 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_154.root
+Begin processing the 290001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:12:17.056 CEST
+29-May-2019 19:12:39 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_154.root
+29-May-2019 19:12:39 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_155.root
+29-May-2019 19:12:39 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_155.root
+29-May-2019 19:13:14 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_155.root
+29-May-2019 19:13:14 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_156.root
+29-May-2019 19:13:14 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_156.root
+Begin processing the 300001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:13:30.814 CEST
+29-May-2019 19:13:57 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_156.root
+29-May-2019 19:13:57 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_157.root
+29-May-2019 19:13:57 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_157.root
+29-May-2019 19:14:28 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_157.root
+29-May-2019 19:14:28 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_158.root
+29-May-2019 19:14:28 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_158.root
+Begin processing the 310001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:14:37.216 CEST
+29-May-2019 19:14:58 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_158.root
+29-May-2019 19:14:58 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_159.root
+29-May-2019 19:14:58 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_159.root
+29-May-2019 19:15:27 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_159.root
+29-May-2019 19:15:27 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_16.root
+29-May-2019 19:15:28 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_16.root
+Begin processing the 320001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:15:38.313 CEST
+29-May-2019 19:16:09 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_16.root
+29-May-2019 19:16:09 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_160.root
+29-May-2019 19:16:10 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_160.root
+29-May-2019 19:16:44 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_160.root
+29-May-2019 19:16:44 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_161.root
+29-May-2019 19:16:44 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_161.root
+Begin processing the 330001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:16:54.897 CEST
+29-May-2019 19:17:16 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_161.root
+29-May-2019 19:17:16 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_162.root
+29-May-2019 19:17:16 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_162.root
+29-May-2019 19:18:00 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_162.root
+29-May-2019 19:18:00 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_163.root
+29-May-2019 19:18:00 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_163.root
+Begin processing the 340001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:18:08.628 CEST
+29-May-2019 19:18:30 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_163.root
+29-May-2019 19:18:30 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_164.root
+29-May-2019 19:18:30 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_164.root
+29-May-2019 19:19:06 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_164.root
+29-May-2019 19:19:06 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_166.root
+29-May-2019 19:19:06 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_166.root
+Begin processing the 350001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:19:17.674 CEST
+29-May-2019 19:19:50 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_166.root
+29-May-2019 19:19:50 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_167.root
+29-May-2019 19:19:50 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_167.root
+29-May-2019 19:20:25 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_167.root
+29-May-2019 19:20:25 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_169.root
+29-May-2019 19:20:25 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_169.root
+Begin processing the 360001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:20:40.196 CEST
+29-May-2019 19:21:08 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_169.root
+29-May-2019 19:21:08 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_17.root
+29-May-2019 19:21:08 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_17.root
+29-May-2019 19:21:37 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_17.root
+29-May-2019 19:21:37 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_170.root
+29-May-2019 19:21:37 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_170.root
+Begin processing the 370001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:21:46.120 CEST
+29-May-2019 19:22:09 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_170.root
+29-May-2019 19:22:09 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_171.root
+29-May-2019 19:22:10 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_171.root
+29-May-2019 19:22:38 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_171.root
+29-May-2019 19:22:38 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_172.root
+29-May-2019 19:22:39 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_172.root
+Begin processing the 380001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:22:55.220 CEST
+29-May-2019 19:23:33 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_172.root
+29-May-2019 19:23:33 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_173.root
+29-May-2019 19:23:33 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_173.root
+29-May-2019 19:24:07 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_173.root
+29-May-2019 19:24:07 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_174.root
+29-May-2019 19:24:07 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_174.root
+Begin processing the 390001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:24:18.916 CEST
+29-May-2019 19:24:43 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_174.root
+29-May-2019 19:24:43 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_175.root
+29-May-2019 19:24:44 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_175.root
+29-May-2019 19:25:24 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_175.root
+29-May-2019 19:25:24 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_176.root
+29-May-2019 19:25:24 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_176.root
+Begin processing the 400001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:25:36.724 CEST
+29-May-2019 19:26:05 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_176.root
+29-May-2019 19:26:05 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_177.root
+29-May-2019 19:26:05 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_177.root
+29-May-2019 19:26:42 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_177.root
+29-May-2019 19:26:42 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_178.root
+29-May-2019 19:26:42 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_178.root
+Begin processing the 410001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:26:50.860 CEST
+29-May-2019 19:27:12 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_178.root
+29-May-2019 19:27:12 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_179.root
+29-May-2019 19:27:13 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_179.root
+29-May-2019 19:27:46 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_179.root
+29-May-2019 19:27:46 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_18.root
+29-May-2019 19:27:46 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_18.root
+Begin processing the 420001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:27:55.261 CEST
+29-May-2019 19:28:16 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_18.root
+29-May-2019 19:28:16 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_180.root
+29-May-2019 19:28:16 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_180.root
+29-May-2019 19:28:54 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_180.root
+29-May-2019 19:28:54 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_181.root
+29-May-2019 19:28:54 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_181.root
+Begin processing the 430001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:29:03.445 CEST
+29-May-2019 19:29:25 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_181.root
+29-May-2019 19:29:25 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_182.root
+29-May-2019 19:29:25 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_182.root
+29-May-2019 19:29:54 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_182.root
+29-May-2019 19:29:54 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_183.root
+29-May-2019 19:29:54 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_183.root
+Begin processing the 440001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:30:03.909 CEST
+29-May-2019 19:30:25 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_183.root
+29-May-2019 19:30:25 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_184.root
+29-May-2019 19:30:25 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_184.root
+29-May-2019 19:30:56 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_184.root
+29-May-2019 19:30:56 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_185.root
+29-May-2019 19:30:56 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_185.root
+Begin processing the 450001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:31:05.431 CEST
+29-May-2019 19:31:30 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_185.root
+29-May-2019 19:31:30 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_186.root
+29-May-2019 19:31:30 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_186.root
+29-May-2019 19:32:10 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_186.root
+29-May-2019 19:32:10 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_187.root
+29-May-2019 19:32:10 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_187.root
+Begin processing the 460001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:32:19.042 CEST
+29-May-2019 19:32:41 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_187.root
+29-May-2019 19:32:41 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_188.root
+29-May-2019 19:32:41 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_188.root
+29-May-2019 19:33:16 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_188.root
+29-May-2019 19:33:16 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_189.root
+29-May-2019 19:33:16 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_189.root
+Begin processing the 470001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:33:25.773 CEST
+29-May-2019 19:33:51 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_189.root
+29-May-2019 19:33:51 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_19.root
+29-May-2019 19:33:51 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_19.root
+29-May-2019 19:34:23 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_19.root
+29-May-2019 19:34:23 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_190.root
+29-May-2019 19:34:24 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_190.root
+Begin processing the 480001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:34:35.542 CEST
+29-May-2019 19:34:59 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_190.root
+29-May-2019 19:34:59 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_191.root
+29-May-2019 19:34:59 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_191.root
+29-May-2019 19:35:30 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_191.root
+29-May-2019 19:35:30 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_192.root
+29-May-2019 19:35:30 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_192.root
+Begin processing the 490001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:35:39.943 CEST
+29-May-2019 19:36:03 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_192.root
+29-May-2019 19:36:03 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_193.root
+29-May-2019 19:36:03 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_193.root
+29-May-2019 19:36:34 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_193.root
+29-May-2019 19:36:34 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_194.root
+29-May-2019 19:36:34 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_194.root
+Begin processing the 500001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:36:42.882 CEST
+29-May-2019 19:37:04 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_194.root
+29-May-2019 19:37:04 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_195.root
+29-May-2019 19:37:04 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_195.root
+29-May-2019 19:37:43 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_195.root
+29-May-2019 19:37:43 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_2.root
+29-May-2019 19:37:44 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_2.root
+Begin processing the 510001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:37:55.302 CEST
+29-May-2019 19:38:19 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_2.root
+29-May-2019 19:38:19 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_20.root
+29-May-2019 19:38:19 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_20.root
+29-May-2019 19:38:48 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_20.root
+29-May-2019 19:38:48 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_21.root
+29-May-2019 19:38:48 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_21.root
+Begin processing the 520001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:38:57.383 CEST
+29-May-2019 19:39:18 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_21.root
+29-May-2019 19:39:18 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_22.root
+29-May-2019 19:39:19 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_22.root
+29-May-2019 19:39:52 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_22.root
+29-May-2019 19:39:52 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_23.root
+29-May-2019 19:39:53 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_23.root
+Begin processing the 530001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:40:05.326 CEST
+29-May-2019 19:40:38 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_23.root
+29-May-2019 19:40:38 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_24.root
+29-May-2019 19:40:38 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_24.root
+29-May-2019 19:41:08 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_24.root
+29-May-2019 19:41:08 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_26.root
+29-May-2019 19:41:08 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_26.root
+Begin processing the 540001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:41:19.959 CEST
+29-May-2019 19:41:41 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_26.root
+29-May-2019 19:41:41 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_27.root
+29-May-2019 19:41:41 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_27.root
+29-May-2019 19:42:13 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_27.root
+29-May-2019 19:42:13 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_28.root
+29-May-2019 19:42:13 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_28.root
+Begin processing the 550001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:42:22.285 CEST
+29-May-2019 19:42:43 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_28.root
+29-May-2019 19:42:43 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_29.root
+29-May-2019 19:42:43 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_29.root
+29-May-2019 19:43:22 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_29.root
+29-May-2019 19:43:22 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_3.root
+29-May-2019 19:43:23 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_3.root
+Begin processing the 560001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:43:31.650 CEST
+29-May-2019 19:43:52 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_3.root
+29-May-2019 19:43:52 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_30.root
+29-May-2019 19:43:52 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_30.root
+29-May-2019 19:44:23 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_30.root
+29-May-2019 19:44:23 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_32.root
+29-May-2019 19:44:23 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_32.root
+Begin processing the 570001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:44:33.166 CEST
+29-May-2019 19:44:57 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_32.root
+29-May-2019 19:44:57 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_33.root
+29-May-2019 19:44:57 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_33.root
+29-May-2019 19:45:33 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_33.root
+29-May-2019 19:45:33 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_34.root
+29-May-2019 19:45:34 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_34.root
+Begin processing the 580001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:45:45.628 CEST
+29-May-2019 19:46:07 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_34.root
+29-May-2019 19:46:07 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_35.root
+29-May-2019 19:46:07 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_35.root
+29-May-2019 19:46:38 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_35.root
+29-May-2019 19:46:38 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_36.root
+29-May-2019 19:46:38 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_36.root
+Begin processing the 590001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:46:48.295 CEST
+29-May-2019 19:47:11 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_36.root
+29-May-2019 19:47:11 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_37.root
+29-May-2019 19:47:11 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_37.root
+29-May-2019 19:47:42 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_37.root
+29-May-2019 19:47:42 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_38.root
+29-May-2019 19:47:42 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_38.root
+Begin processing the 600001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:47:50.069 CEST
+29-May-2019 19:48:02 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_38.root
+29-May-2019 19:48:02 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_39.root
+29-May-2019 19:48:02 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_39.root
+29-May-2019 19:48:45 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_39.root
+29-May-2019 19:48:45 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_4.root
+29-May-2019 19:48:45 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_4.root
+Begin processing the 610001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:48:54.399 CEST
+29-May-2019 19:49:16 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_4.root
+29-May-2019 19:49:16 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_40.root
+29-May-2019 19:49:16 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_40.root
+29-May-2019 19:49:52 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_40.root
+29-May-2019 19:49:52 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_41.root
+29-May-2019 19:49:52 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_41.root
+Begin processing the 620001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:50:01.271 CEST
+29-May-2019 19:50:25 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_41.root
+29-May-2019 19:50:25 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_43.root
+29-May-2019 19:50:25 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_43.root
+29-May-2019 19:51:08 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_43.root
+29-May-2019 19:51:08 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_45.root
+29-May-2019 19:51:08 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_45.root
+Begin processing the 630001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:51:17.981 CEST
+29-May-2019 19:51:42 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_45.root
+29-May-2019 19:51:42 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_46.root
+29-May-2019 19:51:42 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_46.root
+29-May-2019 19:52:12 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_46.root
+29-May-2019 19:52:12 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_47.root
+29-May-2019 19:52:12 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_47.root
+Begin processing the 640001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:52:20.896 CEST
+29-May-2019 19:52:42 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_47.root
+29-May-2019 19:52:42 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_48.root
+29-May-2019 19:52:42 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_48.root
+29-May-2019 19:53:15 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_48.root
+29-May-2019 19:53:15 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_49.root
+29-May-2019 19:53:15 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_49.root
+Begin processing the 650001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:53:26.254 CEST
+29-May-2019 19:53:50 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_49.root
+29-May-2019 19:53:50 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_5.root
+29-May-2019 19:53:50 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_5.root
+29-May-2019 19:54:19 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_5.root
+29-May-2019 19:54:19 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_50.root
+29-May-2019 19:54:19 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_50.root
+Begin processing the 660001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:54:28.376 CEST
+29-May-2019 19:54:51 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_50.root
+29-May-2019 19:54:51 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_51.root
+29-May-2019 19:54:51 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_51.root
+29-May-2019 19:55:21 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_51.root
+29-May-2019 19:55:21 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_52.root
+29-May-2019 19:55:21 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_52.root
+Begin processing the 670001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:55:30.053 CEST
+29-May-2019 19:55:52 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_52.root
+29-May-2019 19:55:52 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_53.root
+29-May-2019 19:55:52 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_53.root
+29-May-2019 19:56:35 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_53.root
+29-May-2019 19:56:35 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_55.root
+29-May-2019 19:56:35 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_55.root
+Begin processing the 680001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:56:44.650 CEST
+29-May-2019 19:57:06 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_55.root
+29-May-2019 19:57:06 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_57.root
+29-May-2019 19:57:06 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_57.root
+29-May-2019 19:57:54 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_57.root
+29-May-2019 19:57:54 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_58.root
+29-May-2019 19:57:55 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_58.root
+Begin processing the 690001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:58:10.356 CEST
+29-May-2019 19:58:39 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_58.root
+29-May-2019 19:58:39 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_6.root
+29-May-2019 19:58:39 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_6.root
+29-May-2019 19:59:09 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_6.root
+29-May-2019 19:59:09 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_61.root
+29-May-2019 19:59:09 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_61.root
+Begin processing the 700001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 19:59:18.492 CEST
+29-May-2019 19:59:41 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_61.root
+29-May-2019 19:59:41 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_62.root
+29-May-2019 19:59:41 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_62.root
+29-May-2019 20:00:27 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_62.root
+29-May-2019 20:00:27 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_63.root
+29-May-2019 20:00:28 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_63.root
+Begin processing the 710001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:00:36.877 CEST
+29-May-2019 20:00:59 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_63.root
+29-May-2019 20:00:59 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_64.root
+29-May-2019 20:00:59 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_64.root
+29-May-2019 20:01:45 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_64.root
+29-May-2019 20:01:45 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_65.root
+29-May-2019 20:01:45 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_65.root
+Begin processing the 720001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:01:56.875 CEST
+29-May-2019 20:02:17 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_65.root
+29-May-2019 20:02:17 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_66.root
+29-May-2019 20:02:17 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_66.root
+29-May-2019 20:02:52 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_66.root
+29-May-2019 20:02:52 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_67.root
+29-May-2019 20:02:52 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_67.root
+Begin processing the 730001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:03:02.446 CEST
+29-May-2019 20:03:23 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_67.root
+29-May-2019 20:03:23 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_68.root
+29-May-2019 20:03:23 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_68.root
+29-May-2019 20:04:06 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_68.root
+29-May-2019 20:04:06 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_69.root
+29-May-2019 20:04:06 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_69.root
+Begin processing the 740001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:04:16.580 CEST
+29-May-2019 20:04:46 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_69.root
+29-May-2019 20:04:46 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_7.root
+29-May-2019 20:04:47 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_7.root
+29-May-2019 20:05:39 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_7.root
+29-May-2019 20:05:39 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_70.root
+29-May-2019 20:05:40 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_70.root
+Begin processing the 750001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:05:49.149 CEST
+29-May-2019 20:06:13 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_70.root
+29-May-2019 20:06:13 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_71.root
+29-May-2019 20:06:13 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_71.root
+29-May-2019 20:06:41 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_71.root
+29-May-2019 20:06:41 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_72.root
+29-May-2019 20:06:42 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_72.root
+Begin processing the 760001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:06:53.630 CEST
+29-May-2019 20:07:20 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_72.root
+29-May-2019 20:07:20 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_73.root
+29-May-2019 20:07:20 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_73.root
+29-May-2019 20:07:53 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_73.root
+29-May-2019 20:07:53 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_74.root
+29-May-2019 20:07:54 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_74.root
+Begin processing the 770001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:08:03.305 CEST
+29-May-2019 20:08:25 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_74.root
+29-May-2019 20:08:25 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_75.root
+29-May-2019 20:08:25 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_75.root
+29-May-2019 20:08:55 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_75.root
+29-May-2019 20:08:55 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_76.root
+29-May-2019 20:08:55 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_76.root
+Begin processing the 780001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:09:04.610 CEST
+29-May-2019 20:09:26 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_76.root
+29-May-2019 20:09:26 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_77.root
+29-May-2019 20:09:26 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_77.root
+29-May-2019 20:10:06 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_77.root
+29-May-2019 20:10:06 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_78.root
+29-May-2019 20:10:06 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_78.root
+Begin processing the 790001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:10:18.520 CEST
+29-May-2019 20:10:40 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_78.root
+29-May-2019 20:10:40 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_79.root
+29-May-2019 20:10:41 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_79.root
+29-May-2019 20:11:13 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_79.root
+29-May-2019 20:11:13 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_8.root
+29-May-2019 20:11:14 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_8.root
+Begin processing the 800001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:11:23.247 CEST
+29-May-2019 20:11:44 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_8.root
+29-May-2019 20:11:44 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_80.root
+29-May-2019 20:11:44 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_80.root
+29-May-2019 20:12:18 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_80.root
+29-May-2019 20:12:18 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_81.root
+29-May-2019 20:12:19 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_81.root
+Begin processing the 810001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:12:31.127 CEST
+29-May-2019 20:12:58 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_81.root
+29-May-2019 20:12:58 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_82.root
+29-May-2019 20:12:58 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_82.root
+29-May-2019 20:13:30 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_82.root
+29-May-2019 20:13:30 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_83.root
+29-May-2019 20:13:30 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_83.root
+Begin processing the 820001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:13:39.470 CEST
+29-May-2019 20:14:02 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_83.root
+29-May-2019 20:14:02 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_84.root
+29-May-2019 20:14:02 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_84.root
+29-May-2019 20:14:34 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_84.root
+29-May-2019 20:14:34 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_85.root
+29-May-2019 20:14:34 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_85.root
+Begin processing the 830001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:14:43.503 CEST
+29-May-2019 20:15:04 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_85.root
+29-May-2019 20:15:04 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_86.root
+29-May-2019 20:15:04 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_86.root
+29-May-2019 20:15:45 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_86.root
+29-May-2019 20:15:45 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_87.root
+29-May-2019 20:15:45 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_87.root
+Begin processing the 840001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:15:54.858 CEST
+29-May-2019 20:16:16 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_87.root
+29-May-2019 20:16:16 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_88.root
+29-May-2019 20:16:16 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_88.root
+29-May-2019 20:16:49 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_88.root
+29-May-2019 20:16:49 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_89.root
+29-May-2019 20:16:49 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_89.root
+Begin processing the 850001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:16:58.016 CEST
+29-May-2019 20:17:22 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_89.root
+29-May-2019 20:17:22 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_9.root
+29-May-2019 20:17:22 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_9.root
+29-May-2019 20:17:55 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_9.root
+29-May-2019 20:17:55 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_90.root
+29-May-2019 20:17:55 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_90.root
+Begin processing the 860001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:18:04.204 CEST
+29-May-2019 20:18:24 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_90.root
+29-May-2019 20:18:24 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_91.root
+29-May-2019 20:18:24 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_91.root
+29-May-2019 20:19:00 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_91.root
+29-May-2019 20:19:00 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_92.root
+29-May-2019 20:19:00 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_92.root
+Begin processing the 870001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:19:10.804 CEST
+29-May-2019 20:19:30 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_92.root
+29-May-2019 20:19:30 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_93.root
+29-May-2019 20:19:31 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_93.root
+29-May-2019 20:20:15 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_93.root
+29-May-2019 20:20:15 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_94.root
+29-May-2019 20:20:15 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_94.root
+Begin processing the 880001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:20:27.133 CEST
+29-May-2019 20:20:48 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_94.root
+29-May-2019 20:20:48 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_95.root
+29-May-2019 20:20:49 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_95.root
+29-May-2019 20:21:23 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_95.root
+29-May-2019 20:21:23 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_96.root
+29-May-2019 20:21:23 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_96.root
+Begin processing the 890001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:21:32.625 CEST
+29-May-2019 20:21:57 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_96.root
+29-May-2019 20:21:57 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_97.root
+29-May-2019 20:21:57 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_97.root
+29-May-2019 20:22:28 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_97.root
+29-May-2019 20:22:28 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_98.root
+29-May-2019 20:22:28 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_98.root
+Begin processing the 900001st record. Run 1, Event 1, LumiSection 1 on stream 0 at 29-May-2019 20:22:36.749 CEST
+29-May-2019 20:22:57 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_98.root
+29-May-2019 20:22:57 CEST  Initiating request to open file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_99.root
+29-May-2019 20:22:57 CEST  Successfully opened file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_99.root
+%MSG-i CondDBESSource:  PostGlobalEndLumi 29-May-2019 20:23:28 CEST  PostGlobalEndLumi
+Getting data for record "LumiSectionDataRcd" to be consumed by run: 1 lumi: 4294967295 event: 18446744073709551615, timestamp: 25000000001; from CondDBESSource::setIntervalFor
+%MSG
+29-May-2019 20:23:28 CEST  Closed file file:/eos/cms/store/group/dpg_tracker_strip/tracker/MaterialBudget/NI/PionGun2018/CMSSW_10_1_6_Pion50GeV_RECO/step3_RAW2DIGI_L1Reco_RECO_RECOSIM_99.root

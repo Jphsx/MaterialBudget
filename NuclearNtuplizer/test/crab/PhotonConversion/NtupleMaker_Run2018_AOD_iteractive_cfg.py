@@ -82,7 +82,7 @@ process.MyNtupleMaking = cms.EDAnalyzer("NtupleMakerPhotonConversions",
 
 #### Root output
 process.TFileService = cms.Service("TFileService",
-  fileName = cms.string("Run2018_iteractive_MCPC.root" )
+  fileName = cms.string("Run2018_iteractive_PC.root" )
 )
 
 #process.out = cms.OutputModule("PoolOutputModule",
