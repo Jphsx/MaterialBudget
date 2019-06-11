@@ -338,6 +338,8 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch("PC_vtx_ndof", "std::vector<double>", &PC_vtx_ndof );
   outputTree->Branch("PC_vtx_normalizedChi2", "std::vector<double>", &PC_vtx_normalizedChi2 );
   outputTree->Branch("PC_vtx_sigmaxx", "std::vector<double>", &PC_vtx_sigmaxx );
+  outputTree->Branch("PC_vtx_sigmayy", "std::vector<double>", &PC_vtx_sigmayy );
+  outputTree->Branch("PC_vtx_sigmazz", "std::vector<double>", &PC_vtx_sigmazz );
   outputTree->Branch("PC_vtx_sigmaxy", "std::vector<double>", &PC_vtx_sigmaxy );
   outputTree->Branch("PC_vtx_sigmaxz", "std::vector<double>", &PC_vtx_sigmaxz );
   outputTree->Branch("PC_vtx_sigmayz", "std::vector<double>", &PC_vtx_sigmayz );
@@ -939,7 +941,10 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 	PC_z->push_back( thisDisplacedVtx.z() );
 
 
-	
+	PC_pairInvariantMass->push_back( conversionsHandle->at(i).pairInvariantMass() );
+	PC_pairCotThetaSeparation->push_back( conversionsHandle->at(i).pairCotThetaSeparation() );
+    PC_distOfMinimumApproach->push_back( conversionsHandle->at(i).distOfMinimumApproach() );
+	PC_dPhiTracksAtVtx->push_back( conversionsHandle->at(i).dPhiTracksAtVtx() );
 
     /// Inbound and outbound momenta
     //const math::XYZTLorentzVector thisRecMomentumInc = thisDisplacedVtx.primaryMomentum("PI", false, 0.0);
@@ -974,6 +979,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     PC_vtx_sigmaxy->push_back( thisDisplacedVtx.covariance(0,1) );
     PC_vtx_sigmaxz->push_back( thisDisplacedVtx.covariance(0,2) );
     PC_vtx_sigmayz->push_back( thisDisplacedVtx.covariance(1,2) );
+	PC_vtx_sigmayy->push_back( thisDisplacedVtx.covariance(1,1) );
+    PC_vtx_sigmazz->push_back( thisDisplacedVtx.covariance(2,2) );
 
 
   //  PC_isNuclear->push_back( thisDisplacedVtx.isNucl() ); 
