@@ -203,11 +203,11 @@ void NtupleMakerPhotonConversions::beginJob()
   PC_vTrack_closestDzPVIdx_dxy = new std::vector< std::vector< double > >;
   PC_vTrack_closestDzPVIdx_dz = new std::vector< std::vector< double > >;
 
-	PC_vTrack_charge = new std::vector<int>;
+	PC_vTrack_charge = new std::vector<std::vector<int> >;
 	//refitted track quantites
-	PC_fTrack_pt = new std::vector<double>;
-	PC_fTrack_eta = new std::vector<double>;
-	PC_ftrack_phi = new std::vector<double>;
+	PC_fTrack_pt = new std::vector<std::vector<double> >;
+	PC_fTrack_eta = new std::vector<std::vector<double> >;
+	PC_ftrack_phi = new std::vector<std::vector<double> >;
 
   numberOfPFPC=0;
 
@@ -1212,8 +1212,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     }
 
 	//loop over refitted tracks too
-	if(thisDisplacedVtx->hasRefittedTracks()){
-		std::vector<Track> fTracks = thisDisplacedVtx->refittedTracks();
+	if(thisDisplacedVtx.hasRefittedTracks()){
+		std::vector<reco::Track> fTracks = thisDisplacedVtx.refittedTracks();
 		//store the fitted track quantites
 		for(unsigned int i=0; i<fTracks.size(); i++){
 			fTrack_pt->push_back(fTracks.at(i).pt() );
