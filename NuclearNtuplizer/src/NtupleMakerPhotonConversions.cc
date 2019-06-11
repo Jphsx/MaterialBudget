@@ -380,7 +380,7 @@ void NtupleMakerPhotonConversions::beginJob()
   //outputTree->Branch( "PC_vTrack_isHighPurity", "std::vector< std::vector< bool > >", &PC_vTrack_isHighPurity );
 
   outputTree->Branch( "PC_fTrack_pt" , "std::vector< std::vector< double > >", &PC_fTrack_pt);
-  outputTree->Branch( "PC_fTrack_theta", "std::vector< std::vector< double > >", &PC_fTrack_theta);
+  outputTree->Branch( "PC_fTrack_eta", "std::vector< std::vector< double > >", &PC_fTrack_eta);
   outputTree->Branch( "PC_fTrack_phi", "std::vector< std::vector< double > >", &PC_fTrack_phi);
   //outputTree->Branch( "numberOfPFPC", &numberOfPFPC, "numberOfPFPC/i");
 }
