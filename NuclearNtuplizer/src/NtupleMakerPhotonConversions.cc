@@ -1176,9 +1176,9 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 	  vTrack_charge.push_back( (*trackDisplacedVertex)->charge() ); 
 
 		if( thisDisplacedVtx.hasRefittedTracks() ){
-			fTrack_pt.push_back( thisDisplacedVtx.refittedTrack((*trackDisplacedVertex))->pt() );
-			fTrack_eta.push_back( thisDisplacedVtx.refittedTrack((*trackDisplacedVertex))->eta() );
-			fTrack_phi.push_back( thisDisplacedVtx.refittedTrack((*trackDisplacedVertex))->phi() );
+			fTrack_pt.push_back( thisDisplacedVtx.refittedTrack((*trackDisplacedVertex)).pt() );
+			fTrack_eta.push_back( thisDisplacedVtx.refittedTrack((*trackDisplacedVertex)).eta() );
+			fTrack_phi.push_back( thisDisplacedVtx.refittedTrack((*trackDisplacedVertex)).phi() );
 		}
 
       /// Look for closest PV
