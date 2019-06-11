@@ -250,7 +250,7 @@ class NtupleMakerPhotonConversions : public edm::EDAnalyzer
 	std::vector<std::vector<int> > *PC_vTrack_charge;
 	//refitted track quantites
 	std::vector<std::vector<double> > *PC_fTrack_pt;
-	std::vector<std::vector<double> > *PC_fTrack_eta;
+	std::vector<std::vector<double> > *PC_fTrack_theta;
 	std::vector<std::vector<double> > *PC_fTrack_phi;
 	
 

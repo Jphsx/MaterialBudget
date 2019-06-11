@@ -969,7 +969,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 	//covariance and fit stuff
 	PC_vtx_chi2->push_back( thisDisplacedVtx.chi2() );
     PC_vtx_ndof->push_back( thisDisplacedVtx.ndof() );
-	PC_vtx_normalizedChi2( thisDisplacedVtx.normalizedChi2() );
+	PC_vtx_normalizedChi2->push_back( thisDisplacedVtx.normalizedChi2() );
     PC_vtx_sigmaxx->push_back( thisDisplacedVtx.covariance(0,0) );
     PC_vtx_sigmaxy->push_back( thisDisplacedVtx.covariance(0,1) );
     PC_vtx_sigmaxz->push_back( thisDisplacedVtx.covariance(0,2) );
