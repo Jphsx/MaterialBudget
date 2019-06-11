@@ -1170,7 +1170,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       //vTrack_isHighPurity.push_back( (*trackDisplacedVertex)->quality((*trackDisplacedVertex)->qualityByName("HighPurity") ) ); // high purity
       // rho doesn't exit if you reconstruct PF Displaced vertex from AOD
       //std::cout << "TEST: (*trackDisplacedVertex)->innerPosition().Rho() = " << (*trackDisplacedVertex)->innerPosition().Rho() << std::endl;
-      vTrack_rho.push_back( (*trackDisplacedVertex)->innerPosition().Rho() );
+    //  vTrack_rho.push_back( (*trackDisplacedVertex)->innerPosition().Rho() );
       vTrack_numberOfValidHits.push_back( (*trackDisplacedVertex)->numberOfValidHits() );
       vTrack_numberOfExpectedOuterHits.push_back( 0 );//(*trackDisplacedVertex)->trackerExpectedHitsOuter().numberOfHits() );
 	  vTrack_charge.push_back( (*trackDisplacedVertex)->charge() ); 
