@@ -207,7 +207,7 @@ void NtupleMakerPhotonConversions::beginJob()
 	//refitted track quantites
 	PC_fTrack_pt = new std::vector<std::vector<double> >;
 	PC_fTrack_eta = new std::vector<std::vector<double> >;
-	PC_ftrack_phi = new std::vector<std::vector<double> >;
+	PC_fTrack_phi = new std::vector<std::vector<double> >;
 
   numberOfPFPC=0;
 
@@ -327,7 +327,7 @@ void NtupleMakerPhotonConversions::beginJob()
 
   outputTree->Branch( "PC_fitmomentumOut_pt", "std::vector< double >", &PC_fitmomentumOut_pt);
   outputTree->Branch( "PC_fitmomentumOut_phi", "std::vector< double >", &PC_fitmomentumOut_phi);
-  outputTree->Branch( "PC_fitmomentumOut_eta", "std::vector< double >", &PC_fitmomentumOut_eta);
+  outputTree->Branch( "PC_fitmomentumOut_theta", "std::vector< double >", &PC_fitmomentumOut_theta);
   outputTree->Branch( "PC_fitmomentumOut_mass", "std::vector< double >", &PC_fitmomentumOut_mass);
 
   outputTree->Branch("PC_pairInvariantMass", "std::vector<double>", &PC_pairInvariantMass );
@@ -380,7 +380,7 @@ void NtupleMakerPhotonConversions::beginJob()
   //outputTree->Branch( "PC_vTrack_isHighPurity", "std::vector< std::vector< bool > >", &PC_vTrack_isHighPurity );
 
   outputTree->Branch( "PC_fTrack_pt" , "std::vector< std::vector< double > >", &PC_fTrack_pt);
-  outputTree->Branch( "PC_fTrack_eta", "std::vector< std::vector< double > >", &PC_fTrack_eta);
+  outputTree->Branch( "PC_fTrack_theta", "std::vector< std::vector< double > >", &PC_fTrack_theta);
   outputTree->Branch( "PC_fTrack_phi", "std::vector< std::vector< double > >", &PC_fTrack_phi);
   //outputTree->Branch( "numberOfPFPC", &numberOfPFPC, "numberOfPFPC/i");
 }
@@ -839,7 +839,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   PC_momentumOut_numberOfTracks->clear();
 
   PC_fitmomentumOut_pt->clear();
-  PC_fitmomentumOut_eta->clear();
+  PC_fitmomentumOut_theta->clear();
   PC_fitmomentumOut_phi->clear();
   PC_fitmomentumOut_mass->clear();
 
@@ -903,7 +903,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 	//refitted track quantites
   PC_fTrack_pt->clear();
   PC_fTrack_eta->clear();
-  PC_ftrack_phi->clear();
+  PC_fTrack_phi->clear();
 
 
   numberOfPC = 0;
@@ -948,7 +948,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 	//refitted pair is p4 from vertex.h, uses electron mass and weight cut of 0.5 weight is contribution to the vertex fit 
 	 const math::XYZTLorentzVectorF thisfRecMomentumOut =  conversionsHandle->at(i).refittedPair4Momentum();
     //temp fix
-	const math::XYZTLorentzVectorF thisRecMomentumInc = thisRecMomentumOut;
+	const math::XYZTLorentzVectorF thisRecMomentumInc = thisfRecMomentumOut;
 
    // PC_momentumInc_pt->push_back( sqrt( thisRecMomentumInc.Perp2() ) );
    // PC_momentumInc_phi->push_back( thisRecMomentumInc.Phi() );
@@ -1216,9 +1216,9 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 		std::vector<reco::Track> fTracks = thisDisplacedVtx.refittedTracks();
 		//store the fitted track quantites
 		for(unsigned int i=0; i<fTracks.size(); i++){
-			fTrack_pt->push_back(fTracks.at(i).pt() );
-			fTrack_eta->push_back(fTracks.at(i).eta() );
-			fTrack_phi->push_back(fTracks.at(i).phi() );
+			fTrack_pt.push_back(fTracks.at(i).pt() );
+			fTrack_eta.push_back(fTracks.at(i).eta() );
+			fTrack_phi.push_back(fTracks.at(i).phi() );
 		}
 	}
 	
