@@ -135,8 +135,32 @@ void NtupleMakerPhotonConversions::beginJob()
   PC_momentumOut_pt = new std::vector< double >;
   PC_momentumOut_phi = new std::vector< double >;
   PC_momentumOut_theta = new std::vector< double >;
-  PC_momentumOut_mass = new std::vector< double >;
+//  PC_momentumOut_mass = new std::vector< double >;
   PC_momentumOut_numberOfTracks = new std::vector< unsigned int >;
+
+  PC_fitmomentumOut_pt = new std::vector< double >;
+  PC_fitmomentumOut_theta = new std::vector< double >;
+  PC_fitmomentumOut_phi = new std::vector< double >;
+  PC_fitmomentumOut_mass = new std::vector< double >;
+
+  //my new stuff
+    PC_pairInvariantMass = new std::vector<double>;
+	PC_pairCotThetaSeparation = new std::vector<double>;
+	PC_distOfMinimumApproach = new std::vector<double>; //dm variable
+	PC_dPhiTracksAtVtx = new std::vector<double>; //dphi of tracks evaluate at vertex
+	//added variables from vertex.h
+	PC_vtx_chi2 = new std::vector<double>;
+	PC_vtx_ndof = new std::vector<double>;
+	PC_vtx_normalizedChi2 = new std::vector<double>;
+	PC_vtx_sigmaxx = new std::vector<double>;
+	PC_vtx_sigmayy = new std::vector<double>;
+	PC_vtx_sigmazz = new std::vector<double>;
+	PC_vtx_sigmaxy = new std::vector<double>;
+	PC_vtx_sigmaxz = new std::vector<double>;
+	PC_vtx_sigmayz = new std::vector<double>;
+
+
+///
 /*  PC_numberOfTracks_0p0 = new std::vector< unsigned int >;
   PC_numberOfTracks_0p2 = new std::vector< unsigned int >;
   PC_numberOfTracks_0p5 = new std::vector< unsigned int >;
@@ -178,6 +202,12 @@ void NtupleMakerPhotonConversions::beginJob()
   PC_vTrack_closestDzPVIdx = new std::vector< std::vector< unsigned int > >;
   PC_vTrack_closestDzPVIdx_dxy = new std::vector< std::vector< double > >;
   PC_vTrack_closestDzPVIdx_dz = new std::vector< std::vector< double > >;
+
+	PC_vTrack_charge = new std::vector<int>;
+	//refitted track quantites
+	PC_fTrack_pt = new std::vector<double>;
+	PC_fTrack_eta = new std::vector<double>;
+	PC_ftrack_phi = new std::vector<double>;
 
   numberOfPFPC=0;
 
@@ -292,8 +322,26 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "PC_momentumOut_pt", "std::vector< double >", &PC_momentumOut_pt );
   outputTree->Branch( "PC_momentumOut_phi", "std::vector< double >", &PC_momentumOut_phi );
   outputTree->Branch( "PC_momentumOut_theta", "std::vector< double >", &PC_momentumOut_theta );
-  outputTree->Branch( "PC_momentumOut_mass", "std::vector< double >", &PC_momentumOut_mass );
+  //outputTree->Branch( "PC_momentumOut_mass", "std::vector< double >", &PC_momentumOut_mass );
   outputTree->Branch( "PC_momentumOut_numberOfTracks", "std::vector< unsigned int >", &PC_momentumOut_numberOfTracks );
+
+  outputTree->Branch( "PC_fitmomentumOut_pt", "std::vector< double >", &PC_fitmomentumOut_pt);
+  outputTree->Branch( "PC_fitmomentumOut_phi", "std::vector< double >", &PC_fitmomentumOut_phi);
+  outputTree->Branch( "PC_fitmomentumOut_eta", "std::vector< double >", &PC_fitmomentumOut_eta);
+  outputTree->Branch( "PC_fitmomentumOut_mass", "std::vector< double >", &PC_fitmomentumOut_mass);
+
+  outputTree->Branch("PC_pairInvariantMass", "std::vector<double>", &PC_pairInvariantMass );
+  outputTree->Branch("PC_pairCotThetaSeparation", "std::vector<double>", &PC_pairCotThetaSeparation );
+  outputTree->Branch("PC_distOfMinimumApproach", "std::vector<double>", &PC_distOfMinimumApproach );
+  outputTree->Branch("PC_dPhiTracksAtVtx", "std::vector<double>", &PC_dPhiTracksAtVtx );
+  outputTree->Branch("PC_vtx_chi2", "std::vector<double>", &PC_vtx_chi2 );
+  outputTree->Branch("PC_vtx_ndof", "std::vector<double>", &PC_vtx_ndof );
+  outputTree->Branch("PC_vtx_normalizedChi2", "std::vector<double>", &PC_vtx_normalizedChi2 );
+  outputTree->Branch("PC_vtx_sigmaxx", "std::vector<double>", &PC_vtx_sigmaxx );
+  outputTree->Branch("PC_vtx_sigmaxy", "std::vector<double>", &PC_vtx_sigmaxy );
+  outputTree->Branch("PC_vtx_sigmaxz", "std::vector<double>", &PC_vtx_sigmaxz );
+  outputTree->Branch("PC_vtx_sigmayz", "std::vector<double>", &PC_vtx_sigmayz );
+
   
 /*  outputTree->Branch( "PC_isNuclear", "std::vector< bool >", &PC_isNuclear );
   outputTree->Branch( "PC_isNuclearLoose", "std::vector< bool >", &PC_isNuclearLoose );
@@ -314,6 +362,7 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "PC_associationMC_TrkVIdx", "std::vector< unsigned int >", &PC_associationMC_TrkVIdx );
 */
   outputTree->Branch( "PC_vTrack_algo", "std::vector< std::vector< int > >", &PC_vTrack_algo );
+  outputTree->Branch( "PC_vTrack_charge","std::vector< std::vector< int > >", &PC_vTrack_charge);
   outputTree->Branch( "PC_vTrack_pt", "std::vector< std::vector< double > >", &PC_vTrack_pt );
   outputTree->Branch( "PC_vTrack_eta", "std::vector< std::vector< double > >", &PC_vTrack_eta );
   outputTree->Branch( "PC_vTrack_phi", "std::vector< std::vector< double > >", &PC_vTrack_phi );
@@ -330,7 +379,10 @@ void NtupleMakerPhotonConversions::beginJob()
   outputTree->Branch( "PC_vTrack_closestDzPVIdx_dz", "std::vector< std::vector< double > >", &PC_vTrack_closestDzPVIdx_dz );
   //outputTree->Branch( "PC_vTrack_isHighPurity", "std::vector< std::vector< bool > >", &PC_vTrack_isHighPurity );
 
-  outputTree->Branch( "numberOfPFPC", &numberOfPFPC, "numberOfPFPC/i");
+  outputTree->Branch( "PC_fTrack_pt" , "std::vector< std::vector< double > >", &PC_fTrack_pt);
+  outputTree->Branch( "PC_fTrack_eta", "std::vector< std::vector< double > >", &PC_fTrack_eta);
+  outputTree->Branch( "PC_fTrack_phi", "std::vector< std::vector< double > >", &PC_fTrack_phi);
+  //outputTree->Branch( "numberOfPFPC", &numberOfPFPC, "numberOfPFPC/i");
 }
 
 /* End Job */
@@ -783,8 +835,28 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   PC_momentumOut_pt->clear();
   PC_momentumOut_phi->clear();
   PC_momentumOut_theta->clear();
-  PC_momentumOut_mass->clear();
+  //PC_momentumOut_mass->clear();
   PC_momentumOut_numberOfTracks->clear();
+
+  PC_fitmomentumOut_pt->clear();
+  PC_fitmomentumOut_eta->clear();
+  PC_fitmomentumOut_phi->clear();
+  PC_fitmomentumOut_mass->clear();
+
+  PC_pairInvariantMass->clear();
+  PC_pairCotThetaSeparation->clear();
+  PC_distOfMinimumApproach->clear();
+  PC_dPhiTracksAtVtx->clear();
+
+  PC_vtx_chi2->clear();
+  PC_vtx_ndof->clear();
+  PC_vtx_normalizedChi2->clear();
+  PC_vtx_sigmaxx->clear();
+  PC_vtx_sigmayy->clear();
+  PC_vtx_sigmazz->clear();
+  PC_vtx_sigmaxy->clear();
+  PC_vtx_sigmaxz->clear();
+  PC_vtx_sigmayz->clear();
  /* PC_numberOfTracks_0p0->clear();
   PC_numberOfTracks_0p2->clear();
   PC_numberOfTracks_0p5->clear();
@@ -827,6 +899,12 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
   PC_vTrack_closestDzPVIdx_dxy->clear();
   PC_vTrack_closestDzPVIdx_dz->clear();
 
+  PC_vTrack_charge->clear();
+	//refitted track quantites
+  PC_fTrack_pt->clear();
+  PC_fTrack_eta->clear();
+  PC_ftrack_phi->clear();
+
 
   numberOfPC = 0;
   int NumberOfLooseNuclearVertex = 0;
@@ -836,14 +914,8 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 //  for ( unsigned int i = 0; i < displacedVtxHandle->size(); i++ )
 //  {
 
-	//check out pf conversions?
-	for(unsigned int i=0; i< displacedVtxHandle->size(); i++){
-		 reco::PFDisplacedVertex thispfDisplacedVtx = displacedVtxHandle->at(i);
-		if( thispfDisplacedVtx.isConv_Loose() || thispfDisplacedVtx.isConv() ){		
-			numberOfPFPC++;
-		} 
-	}
-
+	
+	
 	for(unsigned int i=0; i<conversionsHandle->size(); i++){
 
    
@@ -866,12 +938,15 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 	PC_y->push_back( thisDisplacedVtx.y() );
 	PC_z->push_back( thisDisplacedVtx.z() );
 
+
+	
+
     /// Inbound and outbound momenta
     //const math::XYZTLorentzVector thisRecMomentumInc = thisDisplacedVtx.primaryMomentum("PI", false, 0.0);
     //const math::XYZTLorentzVector thisRecMomentumOut = thisDisplacedVtx.secondaryMomentum("PI", true, 0.0);
 
 	//refitted pair is p4 from vertex.h, uses electron mass and weight cut of 0.5 weight is contribution to the vertex fit 
-	 const math::XYZTLorentzVectorF thisRecMomentumOut =  conversionsHandle->at(i).refittedPair4Momentum();
+	 const math::XYZTLorentzVectorF thisfRecMomentumOut =  conversionsHandle->at(i).refittedPair4Momentum();
     //temp fix
 	const math::XYZTLorentzVectorF thisRecMomentumInc = thisRecMomentumOut;
 
@@ -879,11 +954,27 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
    // PC_momentumInc_phi->push_back( thisRecMomentumInc.Phi() );
    // PC_momentumInc_theta->push_back( thisRecMomentumInc.Theta() );
 
-    PC_momentumOut_pt->push_back( sqrt( thisRecMomentumOut.Perp2() ) );
-    PC_momentumOut_phi->push_back( thisRecMomentumOut.Phi() );
-    PC_momentumOut_theta->push_back( thisRecMomentumOut.Theta() );
-    PC_momentumOut_mass->push_back( thisRecMomentumOut.mass() );
+    PC_fitmomentumOut_pt->push_back( sqrt( thisfRecMomentumOut.Perp2() ) );
+    PC_fitmomentumOut_phi->push_back( thisfRecMomentumOut.Phi() );
+    PC_fitmomentumOut_theta->push_back( thisfRecMomentumOut.Theta() );
+    PC_fitmomentumOut_mass->push_back( thisfRecMomentumOut.mass() );
     PC_momentumOut_numberOfTracks->push_back( conversionsHandle->at(i).nTracks() );
+
+	//store also non fitted momentum
+    PC_momentumOut_pt->push_back( sqrt(conversionsHandle->at(i).pairMomentum().Perp2()) );
+    PC_momentumOut_phi->push_back( conversionsHandle->at(i).pairMomentum().Phi() );
+    PC_momentumOut_theta->push_back( conversionsHandle->at(i).pairMomentum().Theta() );
+
+
+	//covariance and fit stuff
+	PC_vtx_chi2->push_back( thisDisplacedVtx.chi2() );
+    PC_vtx_ndof->push_back( thisDisplacedVtx.ndof() );
+	PC_vtx_normalizedChi2( thisDisplacedVtx.normalizedChi2() );
+    PC_vtx_sigmaxx->push_back( thisDisplacedVtx.covariance(0,0) );
+    PC_vtx_sigmaxy->push_back( thisDisplacedVtx.covariance(0,1) );
+    PC_vtx_sigmaxz->push_back( thisDisplacedVtx.covariance(0,2) );
+    PC_vtx_sigmayz->push_back( thisDisplacedVtx.covariance(1,2) );
+
 
   //  PC_isNuclear->push_back( thisDisplacedVtx.isNucl() ); 
   //  PC_isNuclearLoose->push_back( thisDisplacedVtx.isNucl_Loose() );
@@ -1016,6 +1107,11 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     std::vector< unsigned int > vTrack_closestDzPVIdx;             vTrack_closestDzPVIdx.clear();
     std::vector< double > vTrack_closestDzPVIdx_dxy;               vTrack_closestDzPVIdx_dxy.clear();
     std::vector< double > vTrack_closestDzPVIdx_dz;                vTrack_closestDzPVIdx_dz.clear();
+	std::vector< int > vTrack_charge;							   vTrack_charge.clear();
+
+	std::vector< double > fTrack_pt;							   fTrack_pt.clear();
+	std::vector< double > fTrack_eta;							   fTrack_eta.clear();
+	std::vector< double > fTrack_phi;							   fTrack_phi.clear();
 
     unsigned int nTrackingParticles_PC_0p0 = 0;
     unsigned int nTrackingParticles_PC_0p2 = 0;
@@ -1074,10 +1170,11 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       //vTrack_isHighPurity.push_back( (*trackDisplacedVertex)->quality((*trackDisplacedVertex)->qualityByName("HighPurity") ) ); // high purity
       // rho doesn't exit if you reconstruct PF Displaced vertex from AOD
       //std::cout << "TEST: (*trackDisplacedVertex)->innerPosition().Rho() = " << (*trackDisplacedVertex)->innerPosition().Rho() << std::endl;
-      //vTrack_rho.push_back( (*trackDisplacedVertex)->innerPosition().Rho() );
+      vTrack_rho.push_back( (*trackDisplacedVertex)->innerPosition().Rho() );
       vTrack_numberOfValidHits.push_back( (*trackDisplacedVertex)->numberOfValidHits() );
       vTrack_numberOfExpectedOuterHits.push_back( 0 );//(*trackDisplacedVertex)->trackerExpectedHitsOuter().numberOfHits() );
- 
+	  vTrack_charge.push_back( (*trackDisplacedVertex)->charge() ); 
+
       /// Look for closest PV
       double minDxy = 1000.;
       double dzMinDxy = 1000.;
@@ -1114,6 +1211,18 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       vTrack_closestDzPVIdx_dxy.push_back( dxyMinDz );
     }
 
+	//loop over refitted tracks too
+	if(thisDisplacedVtx->hasRefittedTracks()){
+		std::vector<Track> fTracks = thisDisplacedVtx->refittedTracks();
+		//store the fitted track quantites
+		for(unsigned int i=0; i<fTracks.size(); i++){
+			fTrack_pt->push_back(fTracks.at(i).pt() );
+			fTrack_eta->push_back(fTracks.at(i).eta() );
+			fTrack_phi->push_back(fTracks.at(i).phi() );
+		}
+	}
+	
+
  //   if(nTrackingParticles_PC_0p0 < 3) thisDisplacedVtx.Dump();
     if(nTrackingParticles_PC_0p0 < 3) FlagLess3TracksFromVertex = true;
 /*    PC_numberOfTracks_0p0->push_back( nTrackingParticles_PC_0p0 );
@@ -1127,13 +1236,14 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 */
     //PC_Inc_charge->push_back( Source_Charge );
 
-  //  PC_vTrack_algo->push_back( vTrack_algo );
+    PC_vTrack_algo->push_back( vTrack_algo );
     PC_vTrack_pt->push_back( vTrack_pt );
     PC_vTrack_eta->push_back( vTrack_eta );
     PC_vTrack_phi->push_back( vTrack_phi );
     PC_vTrack_chi2->push_back( vTrack_chi2 );
     PC_vTrack_normalizedChi2->push_back( vTrack_normalizedChi2 );
     //PC_vTrack_isHighPurity->push_back( vTrack_isHighPurity );
+	PC_vTrack_charge->push_back( vTrack_charge );
     PC_vTrack_rho->push_back( vTrack_rho );
     PC_vTrack_numberOfValidHits->push_back( vTrack_numberOfValidHits );
     PC_vTrack_numberOfExpectedOuterHits->push_back( vTrack_numberOfExpectedOuterHits );
@@ -1143,6 +1253,11 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     PC_vTrack_closestDzPVIdx->push_back( vTrack_closestDzPVIdx );
     PC_vTrack_closestDzPVIdx_dxy->push_back( vTrack_closestDzPVIdx_dxy );
     PC_vTrack_closestDzPVIdx_dz->push_back( vTrack_closestDzPVIdx_dz );
+
+	PC_fTrack_pt->push_back(fTrack_pt );
+	PC_fTrack_eta->push_back(fTrack_eta);
+	PC_fTrack_phi->push_back(fTrack_phi);
+
   }
 
 //if (NumberOfLooseNuclearVertex > 0) std:cout << "NumberOfLooseNuclearVertex = " << NumberOfLooseNuclearVertex << " NumberOfNuclearVertex = " << NumberOfNuclearVertex << std::endl;

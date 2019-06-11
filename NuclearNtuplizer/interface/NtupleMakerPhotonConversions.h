@@ -189,6 +189,27 @@ class NtupleMakerPhotonConversions : public edm::EDAnalyzer
     std::vector< double > *PC_momentumOut_mass;
     std::vector< unsigned int > *PC_momentumOut_numberOfTracks;
 
+	std::vector< double > *PC_fitmomentumOut_pt;
+	std::vector< double > *PC_fitmomentumOut_phi;
+	std::vector< double > *PC_fitmomentumOut_theta;
+	std::vector< double > *PC_fitmomentumOut_mass;
+
+	//added variables from conversions.h  // all of these are calculated according to the original tracks
+	std::vector<double> *PC_pairInvariantMass;
+	std::vector<double> *PC_pairCotThetaSeparation;
+	std::vector<double> *PC_distOfMinimumApproach; //dm variable
+	std::vector<double> *PC_dPhiTracksAtVtx; //dphi of tracks evaluate at vertex
+	//added variables from vertex.h
+	std::vector<double> *PC_vtx_chi2;
+	std::vector<double> *PC_vtx_ndof;
+	std::vector<double> *PC_vtx_normalizedChi2;
+	std::vector<double> *PC_vtx_sigmaxx;
+	std::vector<double> *PC_vtx_sigmayy;
+	std::vector<double> *PC_vtx_sigmazz;
+	std::vector<double> *PC_vtx_sigmaxy;
+	std::vector<double> *PC_vtx_sigmaxz;
+	std::vector<double> *PC_vtx_sigmayz;
+
     std::vector< bool > *PC_isNuclear;
     std::vector< bool > *PC_isNuclearLoose;
     std::vector< bool > *PC_isNuclearKink;
@@ -222,6 +243,16 @@ class NtupleMakerPhotonConversions : public edm::EDAnalyzer
     std::vector< std::vector< unsigned int > > *PC_vTrack_closestDzPVIdx;
     std::vector< std::vector< double > > *PC_vTrack_closestDzPVIdx_dxy;
     std::vector< std::vector< double > > *PC_vTrack_closestDzPVIdx_dz;
+
+
+	//added variables from vertex/conversion/track
+	//original track quantites
+	std::vector<std::vector<int> > *PC_vTrack_charge;
+	//refitted track quantites
+	std::vector<std::vector<double> > *PC_fTrack_pt;
+	std::vector<std::vector<double> > *PC_fTrack_eta;
+	std::vector<std::vector<double> > *PC_fTrack_phi;
+	
 
 
 	unsigned int numberOfPFPC;
