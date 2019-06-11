@@ -1175,6 +1175,12 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
       vTrack_numberOfExpectedOuterHits.push_back( 0 );//(*trackDisplacedVertex)->trackerExpectedHitsOuter().numberOfHits() );
 	  vTrack_charge.push_back( (*trackDisplacedVertex)->charge() ); 
 
+		if( thisDisplacedVtx.hasRefittedTracks() ){
+			fTrack_pt.push_back( thisDisplacedVtx.refittedTrack((*trackDisplacedVertex))->pt() );
+			fTrack_eta.push_back( thisDisplacedVtx.refittedTrack((*trackDisplacedVertex))->eta() );
+			fTrack_phi.push_back( thisDisplacedVtx.refittedTrack((*trackDisplacedVertex))->phi() );
+		}
+
       /// Look for closest PV
       double minDxy = 1000.;
       double dzMinDxy = 1000.;
@@ -1212,7 +1218,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
     }
 
 	//loop over refitted tracks too
-	if(thisDisplacedVtx.hasRefittedTracks()){
+/*	if(thisDisplacedVtx.hasRefittedTracks()){
 		std::vector<reco::Track> fTracks = thisDisplacedVtx.refittedTracks();
 		//store the fitted track quantites
 		for(unsigned int i=0; i<fTracks.size(); i++){
@@ -1221,7 +1227,7 @@ void NtupleMakerPhotonConversions::analyze( const edm::Event& iEvent, const edm:
 			fTrack_phi.push_back(fTracks.at(i).phi() );
 		}
 	}
-	
+*/	
 
  //   if(nTrackingParticles_PC_0p0 < 3) thisDisplacedVtx.Dump();
     if(nTrackingParticles_PC_0p0 < 3) FlagLess3TracksFromVertex = true;
